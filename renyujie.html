@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任宇杰-170602-Button</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			border:none;
+			text-decoration:none;
+		}
+		.outer{
+			width: 400px;
+			height: 300px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -150px;
+			margin-left: -200px;
+			background-color: #a1adb7;
+		}
+		.inner{
+			height: 88px;
+			line-height: 88px;
+			background-color: #fff;
+			margin-top: 107px;
+		}
+		.btn{
+			text-align: center;
+			font-size:0px;
+		}
+		button{
+			width: 100px;
+    		height: 38px;
+    		background-color: #a0adbb;
+    		color: #fff;
+    		box-shadow: 0px 0px 4px #6f8fb4;
+    	}
+    	button:active {
+    	  box-shadow: 0 5px #666;
+    	  transform: translateY(4px);
+    	}
+    	button:focus {
+            color: red;
+        }
+		#left-btn{
+			border-bottom-left-radius: 4px;
+			border-top-left-radius: 4px;
+			border: 1px solid #6f8fb4;
+		}
+		 #left-btn:hover{
+				background-color: #617992;
+    	}
+		#right-btn{
+			border-bottom-right-radius: 4px;
+			border-top-right-radius: 4px;
+			background-color: #84ade0;
+			border:1px solid #6f8fb4;
+			border-left: none;
+		}
+		#right-btn:hover{
+				background-color: #3f70b5;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner">
+			<div class="btn">
+				<button id="left-btn">LOGIN</button>
+				<button id="right-btn">SIGN UP</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
