@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DHC-170600-Action-Buttons</title>
+    <style type="text/css">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      a:hover, a:visited, a:link, a:active {
+        text-decoration: none;
+        color: white;
+      }
+      .main{
+        width:400px;
+        height:200px;
+        background:#a2adb6;
+        margin:50px auto;
+        position: relative;
+      }
+      .btn_wrapper{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: 100%;
+        background: #f2f2f3;
+        height: 50px;
+        transform:translate(-50%,-50%);
+      }
+      .btn_div{
+        float: left;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        border-radius: 3px;
+      }
+      .btn_login{
+        border-radius: 3px 0 0 3px;
+        border:1px solid #69707d;
+        background: linear-gradient(#aab7c4, #89909d);
+        border-right: none;
+      }
+      .btn_signup{
+        border:1px solid #4263a5;
+        border-radius:0 3px 3px 0;
+        background: linear-gradient(#91b9e4, #638bd6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div class="btn_wrapper">
+          <div class="btn_div">
+            <a href="#" class="btn_login">LOGIN</a><a href="#" class="btn btn_signup">SIGN UP</a>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
