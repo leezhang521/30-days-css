@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170602-Checkout</title>
+  <style type="text/css">
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; };
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      background-color: #eee;
+      color: #fff;
+    }
+    ul, ol { list-style:none; }
+    .wrapper::before{
+      content:'';
+      display: block;
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      border: 1px solid #222222;
+      border-radius: 6px;
+      z-index: -1;
+    }
+    .wrapper {
+      position: relative;
+      width: 300px;
+      margin: 0 auto;
+      /*background-color: #fff;*/
+      margin-top: 30px;
+    }
+    .header {
+      height: 42px;
+      line-height: 42px;
+      background: linear-gradient(to bottom, #4f4f4f 0%, #3b3b3b 100%);
+      color: #eee;
+      border-radius: 4px 4px 0 0;
+      border-bottom: 1px solid #222222;
+      box-shadow: inset 0 0 2px rgba(238,238,238,0.5);
+    }
+    .header h2 {
+      margin: 0 18px;
+      width: 100px;
+      float: left;
+      font-size: 18px;
+    }
+    .header p {
+      float: right;
+      width: 100px;
+      margin: 0 18px;
+      text-align: right;
+      font-size: 16px;
+    }
+    .header p span {
+      display: inline-block;
+      width: 50px;
+      margin-right: 0.5em;
+    }
+    .item {
+      display: table;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to bottom, #565656 0%, #505050 100%);
+      box-shadow: inset 0 0 1px rgba(238,238,238,0.5);
+      border-bottom: 1px solid #222222;
+    }
+    .item .box, .item .product, .item .price {
+      display: table-cell;
+      vertical-align: middle;
+      table-layout: fixed;
+    }
+    .item .product p {
+      color: #b3c6cc;
+    }
+    .item .price {
+      text-align: right;
+      padding-right: 18px;
+    }
+    .item .box {
+      position: relative;
+      text-align: center;
+      width: 60px;
+    }
+    .item .box img {
+      width: 45px;
+      height: 45px;
+      vertical-align: middle;
+      border: 1px solid #222;
+      border-radius: 3px;
+    }
+    .item .box::before {
+      position: absolute;
+      content: '';
+      top: 6.5px;
+      left: 7.5px;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 22.5px solid #fff;
+      border-radius: 3px;
+      border-color: rgba(255,255,255,0.35) transparent transparent rgba(255,255,255,0.35);
+    }
+    .item .product {
+      display: table-cell;
+    }
+    .item .price {
+      color: #eee;
+    }
+    .footer {
+      position: relative;
+      height: 52px;
+      line-height: 52px;
+      background: linear-gradient(to bottom, #535353 0%, #444444 100%);
+      border-radius: 0 0 4px 4px;
+      box-shadow: inset 0 0 2px rgba(238,238,238,0.5);
+    }
+    .footer p {
+      width: 140px;
+      padding: 0 16px;
+    }
+    .footer a::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0;
+      bottom: 50%;
+      left: 0;
+      right: 0;
+      background-color: rgba(238,238,238,0.15);
+      border-radius: 3px 3px 0 0;
+    }
+    .footer a {
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transform: translate3d(-10px, -50%, 0);
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #59a226;
+      border-radius: 3px;
+    }
+    .footer a:hover, .footer a label:hover {
+      background-color: #63b32b;
+      cursor: pointer;
+    }
+    .footer a:active, .footer a label:active {
+      background-color: #49881e;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h2>Checkout</h2>
+      <p><span>3</span><label>items</label></p>
+    </div>
+    <div class="content">
+      <ul>
+        <li class="item">
+          <div class="box"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-03-115037.jpg"></div>
+          <div class="product">
+            <h3>Item #1</h3>
+            <p>Description</p>
+          </div>
+          <div class="price">
+            <span>$16.80</span>
+          </div>
+        </li>
+        <li class="item">
+          <div class="box"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-03-122205.jpg"></div>
+          <div class="product">
+            <h3>Item #2</h3>
+            <p>Description</p>
+          </div>
+          <div class="price">
+            <span>$15.00</span>
+          </div>
+        </li>
+        <li class="item">
+          <div class="box"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-03-3.jpg"></div>
+          <div class="product">
+            <h3>Item #3</h3>
+            <p>Description</p>
+          </div>
+          <div class="price">
+            <span>$23.00</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer">
+      <p class="total">Total: <span>$54.80</span></p>
+      <a><label>Continue</label></a>
+    </div>
+  </div>
+</body>
+</html>
