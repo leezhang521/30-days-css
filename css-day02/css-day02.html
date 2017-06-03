@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>杜学萌-170603-购物清单</title>
+	<link rel="stylesheet" href="../common.css">
+	<style>
+		body{background: #eee;font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;color: #fff;}		
+		a{color: #fff;}
+		.shopping-box{width: 300px;border:1px solid #202020;margin: 30px auto 0;background: #515151;}
+		.shopping-top{line-height: 40px;padding:0 15px;font-weight: bold;background: linear-gradient(#515151, #383838);box-shadow: inset 0 0 2px rgba(238,238,238,0.5);}
+		.shopping-title,
+		.shopping-pro,
+		.shopping-proinfro{float: left;}
+		.shopping-item,
+		.price{float: right;}
+		.shopping-title,
+		.shopping-proinfro > p,
+		.btn{text-transform:capitalize;}
+		.shopping-list li{background: linear-gradient(#565656, #4f4f4f);box-shadow: inset 0 0 2px rgba(238,238,238,0.5);border-bottom: 1px solid #222;padding:0 14px 0 6px;}
+		.shopping-pro{width: 44px;height: 44px;border:1px solid #000;border-radius: 3px;margin: 6px 10px 0 0;background: #000;position: relative;}
+		.shopping-pro::after{content: "";width: 100%;height: 100%;position: absolute;top: 0;left: 0;width: 0;height: 0;border-width: 0 0 45px 45px;border-style: solid;border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);}
+		.shopping-pro img{width: 100%;height: 100%;}
+		.shopping-proinfro h2{margin-top: 12px;}
+		.shopping-proinfro h2 a{font-weight: bold;text-transform:capitalize;}
+		.price{line-height: 58px;font-weight: bold;}
+		.shopping-footer{position:relative;padding:0 9px;background: linear-gradient(#515151, #383838);box-shadow: inset 0 0 2px rgba(238,238,238,0.5);font-weight: bold;}
+		.total{line-height: 49px;}
+		.btn{padding:10px 24px;background: linear-gradient(#70af44 50%, #579e25 50%);box-shadow: inset 0 0 2px rgba(238,238,238,0.5);border:1px solid #333;border-radius: 3px;position: absolute;top: 50%;right:10px;transform:translate(0,-50%);}
+		.btn:link{color: #fff;}
+		.btn:visited{color: #fff;}
+		.btn:hover{color: #3c090d;}
+		.btn:active{color: #ce4949;}
+	</style>
+</head>
+<body>
+	<div class="shopping-box">
+		<div class="shopping-top clearfix">
+			<div class="shopping-title">checkout</div>
+			<div class="shopping-item">3 <span>items</span></div>
+		</div>
+		<ul class="shopping-list">
+			<li class="clearfix">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt="">	</a>
+				</div>
+				<div class="shopping-proinfro">
+					<h2><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price">$16.8</div>
+			</li>
+			<li class="clearfix">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt="">	</a>
+				</div>
+				<div class="shopping-proinfro">
+					<h2><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price">$16.8</div>
+			</li>
+			<li class="clearfix">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt="">	</a>
+				</div>
+				<div class="shopping-proinfro">
+					<h2><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price">$16.8</div>
+			</li>
+		</ul>
+		<div class="shopping-footer clearfix">
+			<div class="shopping-title total">total: <span>$54.8</span></div>
+			<div class="shopping-item"><a href="javascript:;" class="btn">continue</a></div>
+		</div>
+	</div>
+</body>
+</html>
