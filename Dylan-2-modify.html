@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*以上公共样式*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .boxShow {
+            box-shadow: 1px 1px 1px #5b5b5b inset, -1px -1px 1px #5b5b5b inset;
+        }
+
+        /*外层大的DIV*/
+        .wrapper {
+            width: 302px;
+            margin: 30px auto;
+            background-color: #535353;
+            border-radius: 3px;
+            border: 1px solid #202020;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px #5b5b5b , -1px -1px 3px #5b5b5b ;
+        }
+
+        /*头部第一层*/
+        .wrapper .wrapper_header {
+            width: 100%;
+            height: 42px;
+            line-height: 42px;
+            background: linear-gradient(to bottom, #505050, #3a3a3a);
+        }
+
+        .wrapper_header_left {
+            float: left;
+            margin-left: 16px;
+        }
+
+        .wrapper_header_right {
+            float: right;
+            margin-right: 16px;
+
+        }
+
+        /*中间3层*/
+        .wrappercenter{
+            min-height: 60px;
+            background: linear-gradient(to bottom, #575757, #4f4f4f);
+            border-top: 1px solid #202020;
+            font-size: 12px;
+        }
+        .stbody {
+            width: 230px;
+            display: inline-block;
+        }
+        .stimg {
+            float: left;
+            height: 48px;
+            width: 48px;
+            border: 1px solid #202020;
+            margin: 5px 0 0 16px;
+            background-image: linear-gradient(to bottom right, #262626 50%, #000000 50%);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .stimg img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+        .sttext {
+            line-height: 24px;
+            overflow: hidden;
+            min-width: 50px;
+            word-wrap: break-word;
+            padding: 5px;
+
+        }
+        .sttext p:nth-child(2){
+            color: #79adc7;
+        }
+
+        .rightbody{
+            line-height: 60px;
+            margin-right:16px;
+            float: right;
+
+        }
+        /*底部*/
+        .wrapper_footer {
+            height: 53px;
+            line-height: 53px;
+            width: 100%;
+            background: linear-gradient(to bottom, #525252, #444444);
+            border-top: 1px solid #202020;
+            position: relative;
+        }
+        .wrapper_footer p{
+            margin-left: 16px;
+            float: left;
+        }
+        .wrapper_footer a{
+
+            display: inline-block;
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            float: right;
+            background-image: linear-gradient(to bottom, #6eae42 50%, #589f26 50%);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: -15px 11px 0 0;
+            border: 1px solid #202020;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <ul>
+        <li class="wrapper_header clearfix boxShow">
+            <p class="wrapper_header_left clearfix">Checkout</p>
+            <p class="wrapper_header_right clearfix">3 items</p>
+        </li>
+        <li class="wrappercenter boxShow clearfix ">
+            <div class="stbody clearfix">
+                <div class="stimg boxShow">
+                    <a href="#">
+                        <img src="http://img4.duitang.com/uploads/item/201509/10/20150910225146_hFfnK.thumb.224_0.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="sttext">
+                    <p >item#1</p>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="rightbody">$16.80</div>
+        </li>
+        <li class="wrappercenter boxShow clearfix ">
+            <div class="stbody clearfix">
+                <div class="stimg boxShow">
+                    <a href="#">
+                        <img src="http://www.soideas.cn/uploads/allimg/150130/3-www.soideas.cn150130110408-50.jpg" alt="">
+                    </a>
+                </div>
+                <div class="sttext">
+                    <p >item#2</p>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="rightbody">$15.00</div>
+        </li>
+        <li class="wrappercenter boxShow clearfix ">
+            <div class="stbody clearfix">
+                <div class="stimg boxShow">
+                    <a href="#">
+                        <img src="http://img.bitscn.com/upimg/allimg/c160120/1453262W253120-12J05.jpg" alt="">
+                    </a>
+                </div>
+                <div class="sttext">
+                    <p >item#3</p>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="rightbody">$23.00</div>
+        </li>
+        <li class="wrapper_footer boxShow clearfix">
+            <p>
+                Total:$54.80
+            </p>
+            <a href="#" class="boxShow">Continue</a>
+        </li>
+    </ul>
+</div>
+<ul>
+    <li>
+
+    </li>
+</ul>
+</body>
+</html>
