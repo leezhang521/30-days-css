@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170604-Task</title>
+  <style type="text/css">
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; };
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      background-color: #f2f8fc;
+      color: #fff;
+    }
+    ul, ol { list-style:none; }
+    .wrapper {
+      width: 240px;
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color: #eee;
+      border-radius: 4px;
+      border: 1px solid #cdd3d7;
+      box-shadow: 3px 2px 5px 1px rgba(0,0,0,0.47);
+    }
+    .header {
+      height: 40px;
+      position: relative;
+    }
+    .header h2 {
+      display: inline-block;
+      line-height: 40px;
+      color: #5d6b79;
+      padding-left: 15px;
+      font-size: 18px;
+    }
+    .header .menu {
+      position: absolute;
+      content: '';
+      width: 21px;
+      height: 3.5px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      border-top: 3px solid #8c959d;
+      border-bottom: 3px solid #8c959d;
+      background-color: #8c959d;
+      padding: 3.5px 0;
+      background-clip:content-box;
+    }
+    .header .menu:hover {
+      border-top-color: #9da7af;
+      border-bottom-color: #9da7af;
+      background-color: #9da7af;
+    }
+    .header .menu:active {
+      border-top-color: #72787d;
+      border-bottom-color: #72787d;
+      background-color: #72787d;
+    }
+    .box {
+      height: 50px;
+      display: table;
+      vertical-align: middle;
+      background-color: #fff;
+      border-top: 1px solid #f0f2f3;
+    }
+    .box label {
+      display: block;
+      box-sizing: border-box;
+      padding: 13px 15px;
+      height: 50px;
+      width: 240px;
+      color: #c4cbd2;
+    }
+    .box .checkbox {
+      display: none;
+    }
+    .box .mark {
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #c4cbd2;
+      border-radius: 12px;
+    }
+    .mark::before {
+      content: "";
+      display: none;
+      position: absolute;
+      top:20%;
+      left: 15%;
+      height: 5px;
+      width: 10px;
+      border: solid #39ca74;
+      border-width: 0 0 4px 4px;
+      transform: rotate(-45deg);
+    }
+    .box .text {
+      display: block;
+      line-height: 24px;
+      margin-left: 35px;
+      height: 26px;
+    }
+    .checkbox:checked~ .mark::before {
+      display: block;
+    }
+    .checkbox:checked~ .text {
+      text-decoration: line-through;
+      color: #39ca74;
+    }
+    .checkbox:checked~ .mark {
+      border-color: #39ca74;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h2>Tasks</h2>
+      <span class="menu"></span>
+    </div>
+    <ul>
+      <li class="box">
+        <label>
+          <input type="checkbox" class="checkbox" checked>
+          <span class="mark"></span>
+          <span class="text">On your mark</span>
+        </label>
+      </li>
+      <li class="box">
+        <label>
+          <input type="checkbox" class="checkbox" checked>
+          <span class="mark"></span>
+          <span class="text">Get set</span>
+        </label>
+      </li>
+      <li class="box">
+        <label>
+          <input type="checkbox" class="checkbox">
+          <span class="mark"></span>
+          <span class="text">Gol</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

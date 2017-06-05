@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170605-Plans&Pricing-Table</title>
+  <style type="text/css">
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; };
+    * {
+      box-sizing: border-box;
+    }
+    html, body, .container {
+      height: 100%;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    ul, ol { list-style:none; }
+    .container {
+      position: relative;
+      width: 800px;
+      min-height: 600px;
+      margin: 0 auto;
+      background-color: #efebe5;
+    }
+    .flag {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      z-index: 999;
+    }
+    .flag .fl-bg {
+      position: absolute;
+      overflow: hidden;
+      top: -30px;
+      right: -5px;
+      border: 100px solid #f1475b;
+      border-color: #f1475b #f1475b transparent transparent;
+      transform: rotate(-5deg);
+    }
+    .flag .fl-wd {
+      position: absolute;
+      top: 40px;
+      right: 22px;
+      color: #fff;
+    }
+    .plan-wrapper {
+      overflow: hidden;
+      overflow-x:scroll;
+      position: absolute;
+      width: 800px;
+      height: 600px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .plan-table {
+      height: 100%;
+      width: 100%;
+      padding: 100px 5px;
+      box-sizing: border-box;
+      display: table;
+      table-layout: fixed;
+    }
+    .plan-table .plan-table-cell {
+      display: table-cell;
+      vertical-align: middle;
+      width: 260px;
+    }
+
+    .plan-table .plan-table-cell .pl-price {
+      position: relative;
+      width: 254px;
+      height: 306px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-sizing: border-box;
+      border: 2px solid #e4ded6;
+      border-radius: 3px;
+    }
+    .pl-price li {
+      text-align: center;
+    }
+    .pl-price .stitle {
+      font-size: 26px;
+      font-weight: normal;
+      color: #2cbae7;
+      margin-top: 10px;
+    }
+    .pl-price .sprice {
+      font-size: 28px;
+      font-weight: bolder;
+      color: #ff9356;
+    }
+    .pl-price .sprice sup {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    .pl-price .smonth {
+      font-size: 10px;
+      color: #ccc;
+    }
+    .pl-price .sline {
+      width: 130px;
+      height: 1px;
+      margin: 20px auto;
+      background-color: #e4ded6;
+    }
+    .pl-price .sinfo {
+      text-align: left;
+      padding-left: 74px;
+      margin: 5px 0;
+      color: #999999;
+      font-size: 14px;
+    }
+    .pl-price .sinfo .sblod {
+      font-size: 24px;
+      color: #000;
+      margin-right: 4px;
+    }
+    .pl-price .button {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      width: 152px;
+      height: 42px;
+      color: #fff;
+      background-color: #ff9356;
+      border-radius: 4px;
+      transform: translateX(-50%);
+      text-align: center;
+      line-height: 42px;
+      text-decoration:none;
+      box-shadow: 0px 2px 0 2px #d27d31;
+    }
+    .pl-price .button:hover {
+      background-color: #fda06b;
+    }
+    .pl-price .button:active {
+      background-color: #de7a41;
+    }
+    .plan-table .plan-table-cell .chosed {
+      height: 400px;
+      border: 4px solid #2cbae7;
+      padding-top: 50px;
+    }
+    .plan-table .plan-table-cell .chosed::before {
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 188px;
+      height: 30px;
+      content: 'Recommended';
+      background-color: #2cbae7;
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      border-radius: 3px;
+    }
+    .plan-table .plan-table-cell .chosed .button {
+      background-color: #2cbae7;
+      width: 204px;
+      height: 52px;
+      bottom: 20px;
+      box-shadow: 0px 2px 0 2px #3495b4;
+      line-height: 52px;
+      font-size: 18px;
+      }
+      .plan-table .plan-table-cell .chosed .button:hover {
+        background-color: #44cdf9;
+      }
+      .plan-table .plan-table-cell .chosed .button:active {
+        background-color: #24a3cc;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flag">
+      <div class="fl-bg"></div>
+      <span class="fl-wd">Free PSD</span>
+    </div>
+
+    <div class="plan-wrapper">
+      <ul class="plan-table">
+        <li class="plan-table-cell">
+          <ul class="pl-price">
+            <li class="stitle">Starter</li>
+            <li class="sprice"><span>€</span><span>59,<sup>90<sup></span></li>
+            <li class="smonth">per month</li>
+            <li class="sline"></li>
+            <li class="sinfo"><span class="sblod">03</span><span>websites</span></li>
+            <li class="sinfo"><span class="sblod">10</span><span>bdd access</span></li>
+            <li class="sinfo"><span class="sblod">02</span><span>users</span></li>
+            <a class="button" href="javascript:void(0)">Chose Plan</a>
+          </ul>
+        </li>
+        <li class="plan-table-cell">
+          <ul class="pl-price chosed">
+            <li class="stitle">Team</li>
+            <li class="sprice"><span>€</span><span>129,<sup>90<sup></span></li>
+            <li class="smonth">per month</li>
+            <li class="sline"></li>
+            <li class="sinfo"><span class="sblod">10</span><span>websites</span></li>
+            <li class="sinfo"><span class="sblod">25</span><span>bdd access</span></li>
+            <li class="sinfo"><span class="sblod">05</span><span>users</span></li>
+            <a class="button" href="javascript:void(0)">Chose Plan</a>
+          </ul>
+        </li>
+        <li class="plan-table-cell">
+          <ul class="pl-price">
+            <li class="stitle">Premium</li>
+            <li class="sprice"><span>€</span><span>259,<sup>90<sup></span></li>
+            <li class="smonth">per month</li>
+            <li class="sline"></li>
+            <li class="sinfo"><span class="sblod">50</span><span>websites</span></li>
+            <li class="sinfo"><span class="sblod">80</span><span>bdd access</span></li>
+            <li class="sinfo"><span class="sblod">25</span><span>users</span></li>
+            <a class="button" href="javascript:void(0)">Chose Plan</a>
+          </ul>
+        </li>
+        <li class="plan-table-cell">
+          <ul class="pl-price">
+            <li class="stitle">Corporate</li>
+            <li class="sprice"><span>€</span><span>599,<sup>90<sup></span></li>
+            <li class="smonth">per month</li>
+            <li class="sline"></li>
+            <li class="sinfo"><span class="sblod">800</span><span>websites</span></li>
+            <li class="sinfo"><span class="sblod">100</span><span>bdd access</span></li>
+            <li class="sinfo"><span class="sblod">1000</span><span>users</span></li>
+            <a class="button" href="javascript:void(0)">Chose Plan</a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
