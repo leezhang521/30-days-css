@@ -5,3 +5,4 @@
 - Day2: Shopping Cart Checkout Widget [PSD](http://cdn.cssflow.com/snippets/shopping-cart-checkout-widget/preview-580.png)
 - Day3: Task List [PSD](http://cdn.cssflow.com/snippets/task-list/preview-580.png)
 - Day4: Plans & Pricing Table [PSD](https://dribbble.com/shots/1184256-Pricing-table-free-PSD/attachments/156024)
+- Day5: Notification Windows [PSD](http://cdn.cssflow.com/snippets/notification-windows/preview-580.png)
