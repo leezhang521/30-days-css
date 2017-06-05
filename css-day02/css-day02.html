@@ -38,23 +38,29 @@
 		.btn{
 			text-transform:capitalize;
 		}
-		.shopping-list li{
-			/* padding:0 14px 0 6px; */
+		.shopping-list .shop{
+			padding: 10px;
 			border-bottom: 1px solid #222;
 			background: linear-gradient(#565656, #4f4f4f);
 			box-shadow: inset 0 0 2px rgba(238,238,238,0.5);
 		}
-		.shop{
+		.shop:after{
+			content: "";
 			display: table;
-			width: 100%;
-			padding: 10px 0;
+			clear: both;
 		}
-		.shop > div{
-			display: table-cell;
-			vertical-align: top;
-			padding-left: 10px;
+		.shopping-pro{
+			float: left;
 		}
-		.shop .price{vertical-align: middle;}
+		.shopping-proinfro{
+			overflow: hidden;
+			padding-left: 20px;
+			display: inline-block;
+		}
+		.price{
+			float: right;
+			margin-top: 15px;
+		}
 		.shopping-pro a{
 			position: relative;
 			width: 44px;height: 44px;
@@ -121,41 +127,35 @@
 			<div class="shopping-item">3 <span>items</span></div>
 		</div>
 		<ul class="shopping-list">
-			<li>
-				<div class="shop">
-					<div class="shopping-pro">
-						<a href="javasvript:;"><img src="img.png" alt=""></a>
-					</div>
-					<div class="shopping-proinfro">
-						<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
-						<p class="shop-des"><a href="javascript:;">description</a></p>
-					</div>
-					<div class="price font-bold">$16.8</div>
+			<li class="shop">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt=""></a>
 				</div>
+				<div class="shopping-proinfro">
+					<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price font-bold">$16.8</div>
 			</li>
-			<li>
-				<div class="shop">
-					<div class="shopping-pro">
-						<a href="javasvript:;"><img src="img.png" alt=""></a>
-					</div>
-					<div class="shopping-proinfro">
-						<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
-						<p class="shop-des"><a href="javascript:;">description</a></p>
-					</div>
-					<div class="price font-bold">$16.8</div>
+			<li class="shop">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt=""></a>
 				</div>
+				<div class="shopping-proinfro">
+					<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price font-bold">$16.8</div>
 			</li>
-			<li>
-				<div class="shop">
-					<div class="shopping-pro">
-						<a href="javasvript:;"><img src="img.png" alt=""></a>
-					</div>
-					<div class="shopping-proinfro">
-						<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
-						<p class="shop-des"><a href="javascript:;">description</a></p>
-					</div>
-					<div class="price font-bold">$16.8</div>
+			<li class="shop">
+				<div class="shopping-pro">
+					<a href="javasvript:;"><img src="img.png" alt=""></a>
 				</div>
+				<div class="shopping-proinfro">
+					<h2 class="font-bold"><a href="javascript:;">item #1</a></h2>
+					<p class="shop-des"><a href="javascript:;">description</a></p>
+				</div>
+				<div class="price font-bold">$16.8</div>
 			</li>
 		</ul>
 		<div class="shopping-footer skin clearfix">
