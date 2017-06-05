@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>杜学萌-170605-pricingtable</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		a{color: #fff;}
+		.font-bold{font-weight: bold;}
+		.pricingtable{
+			width: 900px;
+			margin: 30px auto 0;
+			background: #efebe5;
+			padding: 100px 0;
+			position: relative;
+		}
+		.mark{
+			position: absolute;
+			top: 0;right: 0;
+			width: 200px;
+		}
+		.triangle{
+			position: absolute;
+			top: -120px;right: -120px;
+			width: 0;height: 0;
+			border: 120px solid transparent;
+			border-top-color: red;
+			transform:rotate(-135deg);
+		}
+		.text{
+			position: absolute;
+			top: 40px;right: 20px;
+			color: #fff;
+		}
+		.price-list{
+			display: table;
+			table-layout: fixed;
+			margin: 0 auto;
+		}
+		.price-list-menu{
+			width: 280px;
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+		}
+		.price-menu{
+			width: 252px;
+			background: #fff;
+			border:2px solid #e4ded6;
+			border-radius: 5px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.p-title{
+			font-size: 26px;
+       		font-weight: normal;
+       		color: #2cbae7;
+       		margin-top: 10px;
+       	}
+       	.price{
+       		font-size: 28px;
+		    color: #ff9356;
+       	}
+       	.price sup{
+ 			font-size: 18px;
+  		}
+  		.month{
+  			font-size: 10px;
+  			color: #ccc;
+  		}
+  		.line{
+  			width: 130px;
+  			height: 1px;
+  			background: #e4ded6;
+  			margin: 25px auto 20px;
+  		}
+  		.p-infro{
+  			font-size: 14px;
+  			color: #999;
+  			text-align: left;
+  			padding-left: 75px;
+  		}
+  		.p-infro .color{
+  			font-size: 24px;
+  			color: #000;
+  			margin-right: 7px;
+  		}
+  		.choose-btn a{
+			padding: 10px 30px;
+			background: #ff9356;
+			box-shadow: 0 2px 0 0 #d27d31;
+			border-radius: 5px;
+			display: inline-block;
+			margin: 15px 0;
+		}
+		.choose-btn a:hover{
+			background: #de6b2a;
+		}
+		.price-list .current::before {
+	    	content: 'Recommended';
+	    	width: 188px;
+	    	height: 30px;
+	    	text-align: center;
+	    	line-height: 30px;
+	    	color: #fff;
+	    	background: #2cbae7;
+	    	border-radius: 3px;
+	    	position: absolute;
+	    	top: 0;
+	    	left: 50%;
+	    	transform: translateX(-50%);
+	   }	
+		.price-list .current .price-menu{
+			padding-top: 40px;
+			border:4px solid #2cbae7;
+		}
+		.current .choose-btn a{
+			padding: 15px 40px;
+			background: #2cbae7;
+			box-shadow: 0 2px 0 0 #3495b4;
+			margin: 20px 0;
+		}
+		.current .choose-btn a:hover{
+			background: #3495b4;
+		}
+	</style>
+</head>
+<body>
+	<div class="pricingtable">
+		<div class="mark">
+			<i class="triangle"></i>
+			<span class="text">Free PSD</span>
+		</div>
+		<ul class="price-list clearfix">
+			<li class="price-list-menu">
+				<ul class="price-menu">
+					<li class="p-title">Starter</li>
+					<li class="price"><span class="font-bold">€</span><span>59,<sup>90<sup></span></li>
+					<li class="month">per month</li>
+					<li class="line"></li>
+					<li class="p-infro"><span class="color font-bold">03</span><span>websites</span></li>
+					<li class="p-infro"><span class="color font-bold">50</span><span>bdd access</span></li>
+					<li class="p-infro"><span class="color font-bold">80</span><span>user</span></li>
+					<li class="choose-btn"><a href="javascript:;">Choose Plan</a></li>
+				</ul>
+			</li>
+			<li class="price-list-menu current">
+				<ul class="price-menu">
+					<li class="p-title">Starter</li>
+					<li class="price"><span class="font-bold">€</span><span>59,<sup>90<sup></span></li>
+					<li class="month">per month</li>
+					<li class="line"></li>
+					<li class="p-infro"><span class="color font-bold">03</span><span>websites</span></li>
+					<li class="p-infro"><span class="color font-bold">50</span><span>bdd access</span></li>
+					<li class="p-infro"><span class="color font-bold">80</span><span>user</span></li>
+					<li class="choose-btn"><a href="javascript:;">Choose Plan</a></li>
+				</ul>
+			</li>
+			<li class="price-list-menu">
+				<ul class="price-menu">
+					<li class="p-title">Starter</li>
+					<li class="price"><span class="font-bold">€</span><span>59,<sup>90<sup></span></li>
+					<li class="month">per month</li>
+					<li class="line"></li>
+					<li class="p-infro"><span class="color font-bold">03</span><span>websites</span></li>
+					<li class="p-infro"><span class="color font-bold">50</span><span>bdd access</span></li>
+					<li class="p-infro"><span class="color font-bold">80</span><span>user</span></li>
+					<li class="choose-btn"><a href="javascript:;">Choose Plan</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
