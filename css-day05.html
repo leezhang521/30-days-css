@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>杜学萌-170606-Notification</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		a{color: #fff;}
+		.font-bold{font-weight: bold;}
+		.notice{
+			width: 380px;
+			margin: 50px auto 0;
+			background: #343137;
+			padding: 8px 100px 0;
+		}
+		.notice-list li{
+			width: 100%;
+			padding: 30px 0;
+			background: #fff;
+			border-radius: 3px;
+			margin-bottom: 10px;
+			position: relative;
+			display: inline-block;
+		}
+		.notice-wrap:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.notice-object{
+			float: left;
+			padding-left: 30px;
+		}
+		.circle{
+			width: 40px;height: 40px;
+			border-radius: 50%;
+			position: relative;
+			text-align: center;
+		}
+		.green{
+			color: #fff;
+			background: #a7d155;
+			border:5px solid #8fb14f;
+		}
+		.ok{
+			width: 14px;height: 12px;
+			display: block;
+			position: absolute;
+			top: 50%;left: 50%;
+			margin-top: -6px;
+			margin-left: -7px;
+		}
+		.ok:before{
+			content: "";
+			width: 12px;height: 4px;
+			background: #fff;
+			display: block;
+			border-radius: 3px;
+			transform:rotate(-45deg);
+			position: absolute;
+			top: 4px;right: 0;
+		}
+		.ok:after{
+			content: "";
+			width: 8px;height: 4px;
+			background: #fff;
+			display: block;
+			border-radius: 3px;
+			transform:rotate(45deg);
+			position: absolute;
+			top: 5px;left: -1px;
+		}
+		.font-set{
+			font-size: 22px;
+			font-weight: bold;
+			line-height: 42px;
+		}
+		.red{
+			color: #fff;
+			background: #e34f4f;
+			border:5px solid #c14343;
+		}
+		.yellow{
+			color: #5c562b;
+			background: #f1e472;
+			border:5px solid #cec260;
+		}
+		.notice-infro{
+			overflow: hidden;
+			padding-left: 20px;
+		}
+		.notice-infro h2{
+			font-size: 14px;
+			color: #333;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.notice-infro p{
+			font-size: 12px;
+			color: #6f666f;
+			line-height: 22px;
+		}
+		.manipulate-box{
+			width: 60px;height: 25px;
+			background: #f0f0f0;
+			border-left:1px solid #dcdcdc;
+			border-bottom:1px solid #dcdcdc;
+			border-radius: 0 0 0 2px;
+			position: absolute;
+			top: 0;right: 0;
+		}
+		.manipulate-box i{
+			display: inline-block;
+			cursor: pointer;
+			position: absolute;
+			bottom: 8px;
+		}
+		.less{
+			width: 7px;
+			height: 5px;
+			left: 8px;
+			border-bottom: 2px solid #bbb;
+		}
+		.restore{
+			width: 5px;height: 3px;
+			border:2px solid #bbb;
+			left: 25px;
+		}
+		.close{
+			color: #bbb;
+			right: 8px;
+			font-size: 16px;
+			line-height: 7px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="notice">
+		<ul class="notice-list">
+			<li class="notice-wrap">
+				<div class="notice-object">
+					<div class="circle green"><i class="ok"></i></div>
+				</div>
+				<div class="notice-infro">
+					<h2>congratulations!</h2>
+					<p>you found the answer to the ultimate question of life,the universe,and everything.</p>
+				</div>
+				<div class="manipulate-box"><i class="less"></i><i class="restore"></i><i class="close">×</i></div>
+			</li>
+			<li class="notice-wrap">
+				<div class="notice-object">
+					<div class="circle red"><i class="font-set">×</i></div>
+				</div>
+				<div class="notice-infro">
+					<h2>congratulations!</h2>
+					<p>you found the answer to the ultimate question of life,the universe,and everything.</p>
+				</div>
+				<div class="manipulate-box"><i class="less"></i><i class="restore"></i><i class="close">×</i></div>
+			</li>
+			<li class="notice-wrap">
+				<div class="notice-object">
+					<div class="circle yellow"><i class="font-set">!</i></div>
+				</div>
+				<div class="notice-infro">
+					<h2>congratulations!</h2>
+					<p>you found the answer to the ultimate question of life,the universe,and everything.</p>
+				</div>
+				<div class="manipulate-box"><i class="less"></i><i class="restore"></i><i class="close">×</i></div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
