@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170609-Contact_Form</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      overflow: hidden;
+      position: relative;
+      width: 800px;
+      height: 100vh;
+      margin: 0 auto;
+      background: #e5edf0;
+    }
+    .grid:after {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      top: -500px;
+      left: -500px;
+      right: -500px;
+      bottom: -500px;
+      transform: rotate(45deg);
+      background: transparent;
+      background-image: linear-gradient(0deg, #d5e1e5 1px, transparent 0),
+                        linear-gradient(90deg, #d5e1e5 1px, transparent 0);
+      background-size: 5px 5px;
+    }
+    .f_wrapper {
+      position: relative;
+      z-index: 2;
+      width: 360px;
+      margin: 50px auto;
+      background-color: #fcfdfd;
+      box-shadow: inset 0 0 0 5px #f2f7f9;
+      border: 1px solid #ccdade;
+      border-radius: 4px;
+    }
+    .f_wrapper:before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 164px;
+      width: 20px;
+      height: 20px;
+      background-color: #fcfdfd;
+      transform-origin: left bottom;
+      transform: rotate(45deg);
+      background-color: #fcfdfd;
+      box-shadow: inset -3px -3px 0 3px #f2f7f9;
+      border-right: 1px solid #ccdade;
+      border-bottom: 1px solid #ccdade;
+    }
+    .f_wrapper .f_form {
+      width: 300px;
+      height: 340px;
+      margin: 30px auto;
+    }
+    .f_item {
+      width: 280px;
+      margin: 25px auto;
+      text-align: center;
+    }
+    .f_item input[type="text"], .f_item .f_subject {
+      width: 280px;
+      height: 30px;
+    }
+    .f_item .f_subject {
+      -webkit-appearance: none;
+      background: linear-gradient(#fcfdfd, #f5f8f8);
+      height: 30px;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-image: url(http://oeryvxt85.bkt.clouddn.com/2017-06-09-Screen%20Shot%202017-06-09%20at%208.21.05%20PM.png);
+    }
+    .f_item textarea {
+      width: 280px;
+      height: 146px;
+      resize: none;
+    }
+    .border {
+      border: 1px solid #ccdade;
+      border-radius: 3px;
+      box-shadow: 0 0 0 5px #f2f7f9;
+    }
+    .font {
+      line-height: 30px;
+      font-size: 14px;
+      padding: 0 .5em;
+      color: #798e94;
+    }
+    .button {
+      position: absolute;
+      bottom: 42px;
+      right: 40px;
+      width: 100px;
+      color: #85a9b8;
+      text-align: center;
+      box-sizing: content-box;
+      border-radius: 15px;
+      background: linear-gradient(#e5f1f6, #cfe6ef);
+    }
+    .button i {
+      font-style: normal;
+    }
+    .button:hover {
+      background: linear-gradient(#f2fafd, #daedf5);
+      color: #90b3c1;
+    }
+    .button:active {
+      background: linear-gradient(#b9d6e2, #92c1d4);
+      color: #6f8c98;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container grid">
+    <div class="f_wrapper">
+      <form class="f_form">
+        <div class="f_item">
+          <input class="border font" type="text" name="description" placeholder="Your Name…">
+        </div>
+        <div class="f_item">
+          <select id="subject" class="f_subject border font">
+            <option value="0">Choose Subject…</option>
+            <option value="1">English</option>
+            <option value="2">Math</option>
+          </select>
+        </div>
+        <div class="f_item">
+          <textarea class="border font" name="" rows="4" placeholder="Your Message…"></textarea>
+        </div>
+        <a class="border font button" href="javascript:void(0)"><i>Send Message</i></a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
