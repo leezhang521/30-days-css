@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Duxmeng-170611-ProgressBar</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		.progress-wrapper{
+			width: 242px;
+			padding: 132px 78px;
+			margin: 30px auto 0;
+			background-image:radial-gradient(rgba(233,235,238,.9),rgba(182,187,192,.9));
+		}
+		.progress-box{
+			height: 35px;
+			border-radius: 20px;
+			border:1px solid #b3b6b9;
+			background-image: linear-gradient(to bottom,#fff,#b9bdc1);
+			box-shadow: 0px 1px 1px rgba(255,255,255,0.9) inset,0px 2px 2px rgba(0,0,0,0.3),0px 0px 0px 6px rgba(187,184,184,0.6);
+		}
+		.progress-bar{
+			float: left;
+			width: 170px;
+			height: 8px;
+			border-radius: 10px;
+			margin: 15px 0 0 15px;
+			background-image: linear-gradient(to bottom,#969696,#bababa);
+			box-shadow: 1px 1px 0 rgba(255,255,255,.5);
+		}
+		.progress{
+			width: 150px;
+			height: 6px;
+			border:1px solid #0a7d9f;
+			border-radius: 10px;
+			position: relative;
+			overflow: hidden;
+			background-image: linear-gradient(to left,#0cc4ff,#00a0e4);
+		}
+		.progress:after{
+			content: "";
+			position: absolute;
+			top: -500px;
+      		left: -500px;
+     		right: -500px;
+      		bottom: -500px;
+			transform: rotate(45deg);
+      		background: transparent;
+            background-image:linear-gradient(90deg, #5cc7f3 1px, transparent 0);
+            background-size: 3px 3px;
+		}
+		.percent{
+			float: right;
+			font-size: 16px;
+			line-height: 35px;
+			font-weight: bold;
+			margin-right: 15px;
+			text-shadow:1px 1px 0 rgba(255,255,255,.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="progress-wrapper">
+		<div class="progress-box clearfix">
+			<div class="progress-bar">
+				<div class="progress"></div>
+			</div>
+			<div class="percent">95%</div>
+		</div>
+	</div>
+</body>
+</html>
