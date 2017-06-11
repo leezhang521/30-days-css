@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>杜学萌-170608-app-navigation</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		.navigation{
+			width: 294px;
+			padding:130px 143px;
+			background: #404040;
+			margin: 50px auto;
+		}
+		.navigation-list{
+			border-radius: 20px;
+			background: linear-gradient(to bottom,#fefefe, #ebecf1);
+			border-bottom:1px solid #8e8e8e; 
+			box-shadow: 0px 1px 2px rgba(0,0,0,0.5), 1px 1px 2px rgba(69,69,69,0.2), 0px 0px 0px 3px rgba(36,36,36,0.6), 0px -1px 0px 3px rgba(0,0,0,0.9), 0px 0px 0px 3px rgba(209,209,209,1);
+		}
+		.navigation-list li{
+			float: left;
+			margin: 10px 0;
+			padding: 0 15px;
+			position: relative;
+			border-right: 1px dotted #999ba7;
+		}
+		.navigation-list li:last-child{
+			border-right: 0 none;
+		}
+		.navigation-list li > a{
+			color: #434343;
+			font-size: 12px;
+			text-transform:capitalize;
+		}
+		.message{
+			position: absolute;
+			top: -25px;right: 0;
+			color: #fff;
+			width: 23px;height: 23px;
+			background: linear-gradient(to bottom,#f59797,#d1696a);
+			border:1px solid #8d4f50;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 23px;
+		}
+	</style>
+</head>
+<body>
+	<div class="navigation">
+		<ul class="navigation-list clearfix">
+			<li><a href="javascript:;">profile</a></li>
+			<li><a href="javascript:;">settings</a></li>
+			<li><a href="javascript:;">notification<i class="message">3</i></a></li>
+			<li><a href="javascript:;">login</a></li>
+		</ul>
+	</div>
+</body>
+</html>
