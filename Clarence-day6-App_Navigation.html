@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170606-App_Navigation</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      overflow: hidden;
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      background-size: 2px 2px;
+      background: radial-gradient(rgba(95, 93, 93, 0.88) 0%,rgba(35, 35, 35, 0.9) 100%);
+    }
+    .container:after {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      top: -500px;
+      left: -500px;
+      right: -500px;
+      bottom: -500px;
+      transform: rotate(45deg);
+      background: transparent;
+      background-image: linear-gradient(0deg, #3c3c3c 1px, transparent 0),
+                        linear-gradient(90deg, #3c3c3c 1px, transparent 0);
+      background-size: 3px 3px;
+    }
+    .nav {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 340px;
+      height: 48px;
+      border-radius: 24px;
+      border: 5px solid #3c3c3c;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #f7f8f9;
+      box-shadow: 0 .25px .15px .15px #eee, 0 -0.25px .15px .15px #000, 0 0 20px 5px rgba(35, 35, 35, 0.28);
+    }
+    .item {
+      position: relative;
+      display: inline-block;
+      line-height: 38px;
+      box-sizing: border-box;
+    }
+    .item .notification {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      line-height: 26px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 10px;
+      font-family: "Museo";
+      border: 2px solid #8e4f4f;
+      background: linear-gradient(to top,#d56a6a,#f69797);
+      box-shadow: 0 0 .5px .5px #8e4f4f;
+      top: -50%;
+      right: -5px;
+    }
+    .item .notification:hover {
+      background: linear-gradient(to top,rgb(243, 161, 161),#f69797)
+    }
+    .item .notification:active {
+      background: #cc6f6f;
+    }
+    .item a {
+      display: inline-block;
+      line-height: 38px;
+      color: #434343;
+    }
+    .item .s_item:hover {
+      color: #b3b3b3;
+    }
+    .item .s_item:active {
+      color: #000;
+    }
+    .item .text {
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Museo";
+      padding: 0 5px 0 10px;
+    }
+    .border-left {
+      border-left: 1px dotted #989ca8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="nav">
+      <li class="item"><a class="s_item" href="javascript:void(0);"><i class="text">Profile</i></a></li>
+      <li class="item"><a class="s_item" href="javascript:void(0);"><i class="text border-left">Settings</i></a></li>
+      <li class="item"><a class="s_item" href="javascript:void(0);"><i class="text border-left">Notification</i><a href="javascript:void(0)" class="notification">3</a></a></li>
+      <li class="item"><a class="s_item" href="javascript:void(0);"><i class="text border-left">Login</i></a></li>
+    </ul>
+  </div>
+</body>
+</html>
