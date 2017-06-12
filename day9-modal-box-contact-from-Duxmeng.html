@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Duxmeng-170612-light-timer</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		.time-wrapper{
+			width: 298px;
+			padding: 80px 190px;
+			margin: 30px auto 0;
+			background-image: radial-gradient(rgba(233,235,238,.9),rgba(182,187,192,.9));
+		}
+		.timer{
+			float: left;
+			width: 138px;
+			height: 143px;
+			color: #5a5d63;
+			font-size: 100px;
+			font-weight: bold;
+			text-align: center;
+			position: relative;
+			border:1px solid #9fa2ad;
+			border-radius: 3px;
+			background-image:linear-gradient(to bottom,#f9fafb,#c6c9d4,#dadde3);
+			box-shadow: 0 25px 15px rgba(0,0,0,.1),0px 1px 1px rgba(0,0,0,.2) inset;
+		}
+		.timer:before,.timer:after{
+			content: "";
+			position: absolute;
+			bottom: 2px;left: 0;
+			width: 100%;
+			height: 100px;
+			border-bottom:1px solid #9fa2ad;
+			border-radius: 3px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.3);
+		}
+		.timer:after{
+			bottom: 5px;
+		}
+		.line{
+			position: absolute;
+			top: 50%;left: 0;
+			width: 100%;
+			height: 1px;
+			background: rgba(134,137,149,.8);
+			border-top:1px solid rgba(209,212,222,.8);
+			border-bottom:1px solid rgba(234,236,240,.8);
+		}
+		.seconds{
+			float: right;
+		}
+		.time-minute{
+			margin-top: 25px;
+			line-height: 90px;
+		}
+		.sub{
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="time-wrapper clearfix">
+		<div class="timer">
+			<i class="line"></i>
+			<p class="time-minute">12</p>
+			<p class="sub">Minutes</p>
+		</div>
+		<div class="timer seconds">
+			<i class="line"></i>
+			<p class="time-minute">47</p>
+			<p class="sub">Seconds</p>
+		</div>
+	</div>
+</body>
+</html>
