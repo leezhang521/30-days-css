@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Duxmeng-170612-flip-down-clock</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}		
+		.time-wrapper{
+			width: 298px;
+			padding: 80px 190px;
+			margin: 30px auto 0;
+			background-image: radial-gradient(rgba(233,235,238,.9),rgba(182,187,192,.9));
+		}
+		.timer{
+			float: left;
+			width: 138px;
+			height: 143px;
+			color: #5a5d63;
+			font-size: 100px;
+			font-weight: bold;
+			text-align: center;
+			position: relative;
+			border:1px solid #9fa2ad;
+			border-radius: 3px;
+			background-image:linear-gradient(to bottom,#f9fafb,#c6c9d4,#dadde3);
+			box-shadow: 0px -7px 0 rgba(159,162,173,.5) inset,0px -3px 3px rgba(255,255,255,.8) inset,0px -3px 0 rgba(131,134,145,1) inset;
+			 
+		}
+		.timer:before{
+			content:"";
+			position: absolute;
+			top: 50%;left: 0;
+			width: 100%;
+			height: 1px;
+			background: rgba(134,137,149,.8);
+			box-shadow: 0 -1px 0 rgba(209,212,222,.8),0 1px 0 rgba(234,236,240,.8);
+		}
+		.seconds{
+			float: right;
+		}
+		.time-minute{
+			margin-top: 25px;
+			line-height: 90px;
+		}
+		.sub{
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="time-wrapper clearfix">
+		<li class="timer">
+			<p class="time-minute">12</p>
+			<p class="sub">Minutes</p>
+		</li>
+		<li class="timer seconds">
+			<p class="time-minute">47</p>
+			<p class="sub">Seconds</p>
+		</li>
+	</ul>
+</body>
+</html>
