@@ -131,44 +131,43 @@
       border-bottom: 1px solid #697080;
     }
     .c_body {
-      width: 100%;
+      width: 210px;
       height: 180px;
+      margin: 0 auto;
       border-collapse: collapse;
-      table-layout: fixed;
     }
-    .c_body thead {
+    .c_body .t_head {
       font-size: 12px;
       line-height: 30px;
       color: #52ac62;
     }
-    .c_body tbody {
-      background: #454a54;
+    .t_left {
+      float: left;
+      width: 30px;
+    }
+    .c_body .t_date {
+      line-height: 29px;
       font-size: 12px;
-      /*color: #858fa2;*/
+      color: #858fa2;
     }
-    .c_body tbody tr {
-      border-bottom: 1px solid #3b3f47;
-      border-top: 1px solid #4f5561;
-      box-shadow: 0 1px 3px 1px #4f5561;
+    .t_date:hover {
+      color: #fff;
     }
-    .null {
+    .t_date:active {
+      color: #181a1d;
+    }
+
+    .t_body ul {
+      border-top: .5px solid #4f5561;
+    }
+    .t_body .null {
       color: #5a616e;
       pointer-events: none;
     }
-    .active {
+    .t_body .active {
       color: #fff;
       text-shadow: 0 0 3px #fff;
       pointer-events: none;
-    }
-    tbody a {
-      color: #858fa2;
-    }
-
-    tbody a:hover {
-      color: #fff;
-    }
-    tbody a:active {
-      color: #181a1d;
     }
   </style>
 </head>
@@ -182,66 +181,66 @@
           <h3 class="c_title">January 2013</h3>
           <a class="c_next"></a>
         </div>
-        <table class="c_body">
-          <thead>
-            <tr>
-              <th>Mo</th>
-              <th>Tu</th>
-              <th>We</th>
-              <th>Th</th>
-              <th>Fi</th>
-              <th>Sa</th>
-              <th>Su</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="null"><a>31</a></td>
-              <td><a href="javascript:void(0);">1</a></td>
-              <td><a href="javascript:void(0);">2</a></td>
-              <td><a href="javascript:void(0);">3</a></td>
-              <td><a href="javascript:void(0);">4</a></td>
-              <td><a href="javascript:void(0);">5</a></td>
-              <td><a href="javascript:void(0);">6</a></td>
-            </tr>
-            <tr>
-              <td><a href="javascript:void(0);">7</a></td>
-              <td><a href="javascript:void(0);">8</a></td>
-              <td><a href="javascript:void(0);">9</a></td>
-              <td><a href="javascript:void(0);">10</a></td>
-              <td><a href="javascript:void(0);">11</a></td>
-              <td><a href="javascript:void(0);">12</a></td>
-              <td><a href="javascript:void(0);">13</a></td>
-            </tr>
-            <tr>
-              <td><a href="javascript:void(0);">14</a></td>
-              <td><a href="javascript:void(0);">15</a></td>
-              <td><a href="javascript:void(0);" class="active">16</a></td>
-              <td><a href="javascript:void(0);">17</a></td>
-              <td><a href="javascript:void(0);">18</a></td>
-              <td><a href="javascript:void(0);">19</a></td>
-              <td><a href="javascript:void(0);">20</a></td>
-            </tr>
-            <tr>
-              <td><a href="javascript:void(0);">21</a></td>
-              <td><a href="javascript:void(0);">22</a></td>
-              <td><a href="javascript:void(0);">23</a></td>
-              <td><a href="javascript:void(0);">24</a></td>
-              <td><a href="javascript:void(0);">25</a></td>
-              <td><a href="javascript:void(0);">26</a></td>
-              <td><a href="javascript:void(0);">27</a></td>
-            </tr>
-            <tr>
-              <td><a href="javascript:void(0);">28</a></td>
-              <td><a href="javascript:void(0);">29</a></td>
-              <td><a href="javascript:void(0);">30</a></td>
-              <td><a href="javascript:void(0);">31</td>
-              <td class="null"><a>1</a></td>
-              <td class="null"><a>2</a></td>
-              <td class="null"><a>3</a></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="c_body">
+          <div class="t_head">
+            <ul class="clearfix">
+              <li class="t_left">Mo</li>
+              <li class="t_left">Tu</li>
+              <li class="t_left">We</li>
+              <li class="t_left">Th</li>
+              <li class="t_left">Fi</li>
+              <li class="t_left">Sa</li>
+              <li class="t_left">Su</li>
+            </ul>
+          </div>
+          <div class="t_body">
+            <ul class="clearfix">
+              <li class="t_date t_left null"><a>31</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">1</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">2</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">3</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">4</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">5</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">6</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">7</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">8</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">9</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">10</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">11</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">12</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">13</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">14</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">15</a></li>
+              <li><a class="t_date t_left active" href="javascript:void(0);">16</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">17</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">18</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">19</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">20</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">21</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">22</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">23</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">24</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">25</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">26</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">27</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">28</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">29</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">30</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">31</a>
+              <li class="t_date t_left null"><a>1</a></li>
+              <li class="t_date t_left null"><a>2</a></li>
+              <li class="t_date t_left null"><a>3</a></li>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
