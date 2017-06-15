@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Duxmeng-170613-dark-datepicker</title>
+	<link rel="stylesheet" href="common.css">
+	<style>
+		body{
+			color: #858fa2;
+			font-size: 12px;
+			background: #3e424a;
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}	
+		a{color: #858fa2;}	
+		.date-wrapper{
+			width: 215px;
+			padding:10px;
+			margin: 30px auto 0;
+			background: #1d2027;
+			border:1px solid #181c21;
+			border-radius: 3px;
+			box-shadow: 0 2px 2px rgba(0,0,0,.5);
+		}
+		.date{
+			width: 100%;
+			background: #414954;
+			border:1px solid #20232a;
+			border-radius: 3px;
+		}
+		.date-years{
+			height: 29px;
+			line-height: 29px;
+			text-align: center;
+			border-bottom: 1px solid #181B21;
+			border-radius: 3px 3px 0 0;
+			background: linear-gradient(to bottom,#414b56,#252a31);
+			box-shadow: 0 1px 0 rgba(255,255,255,.3) inset,0 1px 3px rgba(0,0,0,.5);
+		}
+		.mounth{
+			margin: 0 20px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 3px;
+			background: #2a2d33;
+			display: inline-block;
+			border:1px solid #1d2024;
+			box-shadow: 0 1px 3px rgba(0,0,0,.5) inset,0 1px 0 rgba(255,255,255,.2);
+		}
+		.mounth a{
+			padding: 5px 10px;
+			color:#858fa2;
+		}
+		.triangle{
+			width: 0;
+   			height: 0;
+   			border-top: 5px solid transparent;
+   			border-bottom: 5px solid transparent;
+   			display: inline-block;
+   			filter: drop-shadow(1px 0 0 #414954);
+		}
+		.prev{
+			border-right: 10px solid #242930;
+			filter: drop-shadow(-1px 0 0 #414954);
+		}
+		.next{
+			border-left: 10px solid #242930;
+		}
+		.calendar{
+			width: 100%;
+			border-radius: 0 0 3px 3px;
+			border-collapse:separate;
+		}
+		.calendar th,.calendar td{text-align: center;}
+		.week{line-height: 30px;}
+		.week th{
+			color: #52ac62;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+		.row{border-radius: 0 0 3px 3px;}
+		.row tr{
+			height: 28px;
+			line-height: 28px;
+			position: relative;
+		}
+		.row td{
+			border-top:  1px solid #4b5461;
+			border-bottom:  1px solid #363d46;
+		}
+		.row tr:last-child td{border-bottom:0 none;}
+		.row .end{color: #5a616e;}
+		.row a{
+			width: 17px;
+			height: 17px;
+			text-align: center;
+			line-height: 17px;
+			display: inline-block;
+			border-radius: 10px;
+		}
+		.row .active{
+			color: #fff;
+			background: #717882; 
+			box-shadow: 0 0 8px rgba(255,255,255,.6);
+		}
+		.row a:hover{
+			color: #fff;
+			background: #717882;
+			border-radius: 10px; 
+			box-shadow: 0 0 8px rgba(255,255,255,.6);
+			transition: all linear .3s,
+			-moz-transition: all linear .3s; 
+			-webkit-transition: all linear .3s; 
+			-o-transition: all linear .3s; 
+		}
+	</style>
+</head>
+<body>
+	<div class="date-wrapper">
+		<div class="date">
+			<div class="date-years">
+				<a class="triangle prev" href="javascript:;"></a>
+				<div class="mounth">
+					<a href="javascript:;"><span> January </span> <span> 2013 </span></a>
+				</div>
+				<a class="triangle next" href="javascript:;"></a>
+			</div>
+			<table class="calendar" cellspacing="1">
+				<thead class="week">
+					<tr>
+						<th>mo</th>
+						<th>tu</th>
+						<th>we</th>
+						<th>th</th>
+						<th>fr</th>
+						<th>sa</th>
+						<th>su</th>
+					</tr>
+				</thead>
+				<tbody class="row">
+					<tr>
+						<td><a href="javascript:;" class="end">31</a></td>
+						<td><a href="javascript:;">1</a></td>
+						<td><a href="javascript:;">2</a></td>
+						<td><a href="javascript:;">3</a></td>
+						<td><a href="javascript:;">4</a></td>
+						<td><a href="javascript:;">5</a></td>
+						<td><a href="javascript:;">6</a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;">7</a></td>
+						<td><a href="javascript:;">8</a></td>
+						<td><a href="javascript:;">9</a></td>
+						<td><a href="javascript:;">10</a></td>
+						<td><a href="javascript:;">11</a></td>
+						<td><a href="javascript:;">12</a></td>
+						<td><a href="javascript:;">23</a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;">14</a></td>
+						<td><a href="javascript:;">15</a></td>
+						<td><a href="javascript:;" class="active">16</a></td>
+						<td><a href="javascript:;">17</a></td>
+						<td><a href="javascript:;">18</a></td>
+						<td><a href="javascript:;">19</a></td>
+						<td><a href="javascript:;">20</a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;">21</a></td>
+						<td><a href="javascript:;">22</a></td>
+						<td><a href="javascript:;">23</a></td>
+						<td><a href="javascript:;">24</a></td>
+						<td><a href="javascript:;">25</a></td>
+						<td><a href="javascript:;">26</a></td>
+						<td><a href="javascript:;">27</a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;">28</a></td>
+						<td><a href="javascript:;">29</a></td>
+						<td><a href="javascript:;">30</a></td>
+						<td><a href="javascript:;">31</a></td>
+						<td><a href="javascript:;" class="end">1</a></td>
+						<td><a href="javascript:;" class="end">2</a></td>
+						<td><a href="javascript:;" class="end">3</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

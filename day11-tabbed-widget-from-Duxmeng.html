@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Duxmeng-170614-tabbed-widget</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+		body{
+			color: #858fa2;
+			font-size: 12px;
+			background: #eee;
+			font-family: OpenSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}	
+		a{color: #b5b5b5;}	
+		.tabbled-widget{
+			width: 340px;
+			padding-top: 12px;
+			margin: 30px auto 0;
+			background: #f7f7f7;
+			border:1px solid #bebebe;
+			border-radius: 3px;
+		}
+		.tabbled-nav{
+			width: 320px;
+			height: 40px;
+			display: table;
+			padding: 0 10px;
+			line-height: 40px;
+			text-align: center;
+		}
+		.tabbled-nav li{
+			width: 30%;
+			background: #fff;
+			display: table-cell;
+			table-layout: fixed;
+			border:1px solid #ccc;
+			border-radius: 3px 3px 0 0;
+			border-right: 0 none;
+			border-bottom: 0 none;
+			position: relative;
+			text-transform: capitalize;
+		}
+		.tabbled-nav .active a{
+			color: #6d6d6d;
+			background: #f7f7f7;
+			position: relative;
+			bottom: -1px;
+		}
+		.tabbled-nav .active:after{
+			content: "";
+			position: absolute;
+			top: -2px;left: 0;
+			width: 100%;
+			height: 6px;
+			background: #44c7f3;
+			border-radius: 5px 5px 0 0;
+		}
+		.tabbled-nav li:last-child{
+			border-right: 1px solid #ccc;
+		}
+		.tabbled-nav li a{
+			width: 100%;
+			display: inline-block;
+		}
+		.tabbled-nav li:hover a{
+			color: #6d6d6d;
+			background: #f7f7f7;
+			transition: all linear .5s,
+			-moz-transition: all linear .5s; 
+			-webkit-transition: all linear .5s; 
+			-o-transition: all linear .5s; 
+		}
+		.tabbled-item:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.tabbled-item{
+			padding: 10px;
+			border-top: 1px solid #ccc;
+			cursor: pointer;
+		}
+		.tabbled-item:after{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.tabbled-left{
+			float: left;
+			width: 40px;
+			height: 40px;
+			background: #ccc;
+			border-radius: 3px;
+			margin-right: 20px;
+		}
+		.tabbled-message{
+			overflow: hidden;
+			line-height: 18px;
+			display: inline-block;
+		}
+		.tabbled-right{
+			width: 10px;
+			height: 5px;
+			float: right;
+			margin-top: 15px;
+			position: relative;
+			border:2px solid #ccc;
+		}
+		.tabbled-right:after{
+			content: "";
+			position: absolute;
+			top: -5px;left: 1px;
+			width:8px;height:8px;
+    		border:2px solid #ccc;
+    		box-sizing:border-box;
+    		border-top:0;
+    		border-left:0;
+    		border-radius:1px;
+    		background:transparent;
+			transform:rotate(45deg);
+		}
+		.active{
+			background: #f5f5f5;
+		}
+		.tabbled-item:hover{
+			background: #f5f5f5;
+			transition: all linear .5s,
+			-moz-transition: all linear .5s; 
+			-webkit-transition: all linear .5s; 
+			-o-transition: all linear .5s; 
+		}
+	</style>
+</head>
+<body>
+	<div class="tabbled-widget">
+		<ul class="tabbled-nav">
+			<li class="active"><a href="javascript:;">all</a></li>
+			<li><a href="javascript:;">designers</a></li>
+			<li><a href="javascript:;">developers</a></li>
+		</ul>
+		<ul class="tabbled-list">
+			<li class="tabbled-item active">
+				<div class="tabbled-left"></div>
+				<div class="tabbled-message">
+					<p>jony</p>
+					<p>i have a dream</p>
+				</div>
+				<div class="tabbled-right"></div>
+			</li>
+			<li class="tabbled-item">
+				<div class="tabbled-left"></div>
+				<div class="tabbled-message">
+					<p>jony</p>
+					<p>i have a dream</p>
+				</div>
+				<div class="tabbled-right"></div>
+			</li>
+			<li class="tabbled-item">
+				<div class="tabbled-left"></div>
+				<div class="tabbled-message">
+					<p>jony</p>
+					<p>i have a dream</p>
+				</div>
+				<div class="tabbled-right"></div>
+			</li>
+			<li class="tabbled-item">
+				<div class="tabbled-left"></div>
+				<div class="tabbled-message">
+					<p>jony</p>
+					<p>i have a dream</p>
+				</div>
+				<div class="tabbled-right"></div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
