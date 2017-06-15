@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170612-Flip-Down-Clock</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      overflow: hidden;
+      position: relative;
+      z-index: -999;
+      width: 800px;
+      height: 100vh;
+      margin: 0 auto;
+      background-color: #e9eaeb;
+    }
+
+    .clock {
+      margin: 60px auto;
+      text-align: center;
+      cursor: default;
+      user-select: none;
+    }
+
+    .clock-block {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      width: 140px;
+      height: 138px;
+      margin: 0 8px;
+      padding-top: 16px;
+      line-height: 1;
+      text-align: center;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+      background: #e5e7eb;
+      border: 1px solid #9fa2ad;
+      border-radius: 3px 3px 2px 2px;
+      box-sizing: border-box;
+      background-image: linear-gradient(to bottom, #f1f2f5, #e5e7eb 20%, #c2c5d1 50%, #e5e7eb 80%, #e4e5eb);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .clock-block:before, .clock-block:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: -1px;
+      right: -1px;
+      z-index: -1;
+      height: 4px;
+      background: #cacfd9;
+      border: 1px solid #9fa2ad;
+      border-radius: 2px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .clock-block:before {
+      bottom: -7px;
+    }
+
+    .clock-val {
+      display: block;
+      position: relative;
+      z-index: 1;
+      font-size: 96px;
+      font-weight: bold;
+      color: #4f5258;
+    }
+    .clock-val:before, .clock-val:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    .clock-val:before {
+      z-index: -1;
+      top: -16px;
+      bottom: 50%;
+      border-radius: 2px 2px 0 0;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+    .clock-val:after {
+      top: 50%;
+      bottom: -16px;
+      border-top: 1px solid rgba(60, 62, 68, 0.4);
+      border-radius: 0 0 2px 2px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) 50%);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .clock-unit {
+      display: block;
+      margin-top: -2px;
+      font-size: 18px;
+      font-weight: 200;
+      color: #6b707a;
+      text-transform: capitalize;
+    }
+    .clock-unit:after {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      top: 100%;
+      left: -1px;
+      right: -1px;
+      height: 30px;
+      margin-top: 6px;
+      border-radius: 0 0 3px 3px;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="clock">
+      <div class="clock-block">
+        <span class="clock-val">12</span>
+        <span class="clock-unit">minutes</span>
+      </div>
+      <div class="clock-block">
+        <span class="clock-val">47</span>
+        <span class="clock-unit">seconds</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

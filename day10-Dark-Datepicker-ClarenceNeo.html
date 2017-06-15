@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170613-Dark-Datepicker</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .container {
+      overflow: hidden;
+      width: 800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background-color: #eee;
+    }
+    .icon {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      border: 3px solid #23262b;
+      text-align: center;
+      line-height: 44px;
+      background-color: #23262b;
+      box-shadow: inset 0 1px 1px .5px #4b505e;
+    }
+    .icon:hover {
+      background-color: #454950;
+    }
+    .icon:active {
+      background-color: #000;
+    }
+    .calendar {
+      position: relative;
+      width: 230px;
+      height: 224px;
+      margin: 0 auto;
+      background-color: #23262b;
+      border-radius: 4px;
+    }
+    .calendar:before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid #23262b;
+      border-color: transparent transparent #23262b transparent;
+    }
+    .c_content {
+      display: inline-block;
+      width: 216px;
+      height: 210px;
+      text-align: center;
+      margin: 7px 7px;
+      background-color: #30343b;
+      border-radius: 3px;
+      border: 1px solid #23252b;
+    }
+    .c_header {
+      width: 100%;
+      height: 30px;
+      background-image: linear-gradient(to top, #2b2e34, #2b2e34, #41464f);
+      border-top: 1px solid #697080;
+      border-bottom: 1px solid #23252b;
+      border-radius: 3px 3px 0 0;
+      box-shadow: 0 1px 3px 1px #23252b;
+    }
+    .c_back, .c_next {
+      border: 6px solid #23252b;
+      border-width: 6px 12px;
+      margin: 8px 0;
+    }
+    .c_back {
+      float: left;
+      border-color: transparent #1d1e21 transparent transparent;
+    }
+    .c_back:hover {
+      border-color: transparent #54565f transparent transparent;
+    }
+    .c_back:active {
+      border-color: transparent #000 transparent transparent;
+    }
+    .c_next {
+      float: right;
+      border-color: transparent transparent transparent #1d1e21;
+
+    }
+    .c_next:hover {
+      border-color: transparent transparent transparent #54565f;
+    }
+    .c_next:active {
+      border-color: transparent transparent transparent #000;
+    }
+    .c_title {
+      display: inline-block;
+      font-size: 10px;
+      line-height: 19px;
+      color: #858fa2;
+      font-weight: 500;
+      width: 90px;
+      height: 20px;
+      margin: 5px 0;
+      background-image: linear-gradient(to bottom, #1d2024, #2a2d33);
+      border-radius: 3px;
+      border-bottom: 1px solid #697080;
+    }
+    .c_body {
+      width: 210px;
+      height: 180px;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    .c_body .t_head {
+      font-size: 12px;
+      line-height: 30px;
+      color: #52ac62;
+    }
+    .t_left {
+      float: left;
+      width: 30px;
+    }
+    .c_body .t_date {
+      line-height: 29px;
+      font-size: 12px;
+      color: #858fa2;
+    }
+    .t_date:hover {
+      color: #fff;
+    }
+    .t_date:active {
+      color: #181a1d;
+    }
+
+    .t_body ul {
+      border-top: .5px solid #4f5561;
+    }
+    .t_body .null {
+      color: #5a616e;
+      pointer-events: none;
+    }
+    .t_body .active {
+      color: #fff;
+      text-shadow: 0 0 3px #fff;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-13-calendar-icon-1.png"></div>
+    <div class="calendar">
+      <div class="c_content">
+        <div class="c_header clearfix">
+          <a class="c_back"></a>
+          <h3 class="c_title">January 2013</h3>
+          <a class="c_next"></a>
+        </div>
+        <div class="c_body">
+          <div class="t_head">
+            <ul class="clearfix">
+              <li class="t_left">Mo</li>
+              <li class="t_left">Tu</li>
+              <li class="t_left">We</li>
+              <li class="t_left">Th</li>
+              <li class="t_left">Fi</li>
+              <li class="t_left">Sa</li>
+              <li class="t_left">Su</li>
+            </ul>
+          </div>
+          <div class="t_body">
+            <ul class="clearfix">
+              <li class="t_date t_left null"><a>31</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">1</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">2</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">3</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">4</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">5</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">6</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">7</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">8</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">9</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">10</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">11</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">12</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">13</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">14</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">15</a></li>
+              <li><a class="t_date t_left active" href="javascript:void(0);">16</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">17</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">18</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">19</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">20</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">21</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">22</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">23</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">24</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">25</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">26</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">27</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a class="t_date t_left" href="javascript:void(0);">28</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">29</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">30</a></li>
+              <li><a class="t_date t_left" href="javascript:void(0);">31</a>
+              <li class="t_date t_left null"><a>1</a></li>
+              <li class="t_date t_left null"><a>2</a></li>
+              <li class="t_date t_left null"><a>3</a></li>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
