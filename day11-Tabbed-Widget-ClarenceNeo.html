@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170614-Tabbed-Widget</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .container {
+      overflow: hidden;
+      width: 800px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background-color: #eaeaea;
+    }
+    .wrapper {
+      width: 340px;
+      margin: 40px auto;
+      border: 1px solid #c3c3c3;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 2px #c3c3c3;
+    }
+    .header {
+      height: 54px;
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #e3e3e3;
+      text-align: center;
+    }
+    .content {
+      background-color: #fff;
+    }
+    .title {
+      display: inline-block;
+      width: 104px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border: 1px solid #e3e3e3;
+      margin-top: 12px;
+      border-radius: 4px 4px 0 0;
+      background-color: #fff;
+    }
+    .null {
+      color: #d5d5d5;
+    }
+    .null:hover {
+      color: #c5c4c4;
+    }
+    .null:active {
+      color: #6c6c6c;
+    }
+    .active {
+      height: 42px;
+      border-top: 3px solid #44c7f3;
+      border-bottom: #fff;
+    }
+    .active a {
+      color: #6c6c6c;
+    }
+    .header li+li {
+      border-left: none;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+    .stbody {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .stbody:hover {
+      background-color: #f7f7f7;
+    }
+    .stbody:active {
+      background-color: #e5e5e5;
+    }
+    .sttext {
+      margin: 0 60px;
+      padding-top: 16px;
+      height: 70px;
+      font-size: 14px;
+    }
+    .stname {
+      color: #919191;
+    }
+    .stfo {
+      font-size: 12px;
+      color: #bdbdbd;
+    }
+    .stfo i {
+      margin-right: .5em;
+      font-style: normal;
+    }
+    .stimg {
+      height: 70px;
+    }
+    .stimg {
+      width: 34px;
+      height: 34px;
+      margin: 18px 13px;
+    }
+    .stmessage {
+      width: 16px;
+      height: 12px;
+      margin: 29px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <ol class="header">
+        <li class="title active"><a href="javascritp:void(0);">All</a></li><li class="title"><a class="null" href="javascritp:void(0);">Designers</a></li><li class="title"><a class="null" href="javascritp:void(0);">Developers</a></li>
+      </ol>
+      <div class="content">
+        <ul>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Aaron Sananes</h3>
+                <span class="stfo"><i>297</i>follwers</span>
+              </div>
+            </a>
+          </li>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head2.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Malter Westedt</h3>
+                <span class="stfo"><i>21</i>follwers</span>
+              </div>
+            </a>
+          </li>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head3.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Daryl Ginn</h3>
+                <span class="stfo"><i>8,765</i>follwers</span>
+              </div>
+            </a>
+          </li>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head4.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Daniel Sandvik</h3>
+                <span class="stfo"><i>2,131</i>follwers</span>
+              </div>
+            </a>
+          </li>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head5.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Arne Westedt</h3>
+                <span class="stfo"><i>2</i>follwers</span>
+              </div>
+            </a>
+          </li>
+          <li class="stbody">
+            <a class="clearfix" href="javascritp:void(0);">
+              <div class="stimg left"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-head6.png"></div>
+              <div class="stmessage right"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-14-mail.png"></div>
+              <div class="sttext">
+                <h3 class="stname">Bill S Kenney</h3>
+                <span class="stfo"><i>12,863</i>follwers</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
