@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duxmeng-170618-analytics-widget</title>
+  <style type="text/css">
+*{margin: 0;padding: 0;box-sizing: border-box;}
+  body {
+	     color: #454d60; 
+	     font-size: 12px;
+	     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	   }
+  input,button,select,textarea{outline:none}
+  ul, ol {list-style: none;}
+  a{text-decoration: none;}
+  .analytic-wrapper {
+    width: 700px;
+    margin: 30px auto 0;
+    padding: 40px 100px;
+    background: #eaeaea;
+    overflow: hidden;
+  }
+  .analytic {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #c3cbdd, #545a6a);
+    border-radius: 6px;
+  }
+  .analytic-top {
+    height: 28px;
+    text-align: left;
+    margin-left: 8px;
+  }
+  .an-title {line-height: 28px;}
+  .choose-type {
+    display: inline-block;
+    width: 70px;
+    height: 18px;
+    border: 1px solid #8b92a3;
+    border-radius: 9px;
+    background: transparent;
+    text-indent: 5px;
+  }
+	.choose-type:hover {color: #737e96;}
+	.analytic-main{padding-bottom: 10px;}
+	.analytic-main:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+    .analytic-panel {
+      float: left;
+      width: 290px;
+      height: 140px;
+      margin: 0 20px 0 8px;
+    }
+    .dendrogram {
+      height: 126px;
+      border: 1px solid #2c313c;
+      border-radius: 3px;
+      background-image: linear-gradient(#858da1 0%, #606676 25%, #3d424f 50%, #606676 75%, #858da1 100%);
+    }
+    .text {
+      color: #b3bed5;
+      margin-top: 5px;
+    }
+    .dendrogram, .text {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+    .de-item {
+      display: table-cell;
+      padding: 0 8px;
+      font-size: 0px;
+      vertical-align: bottom;
+    }
+    .text-item{display: table-cell;text-align: center;}
+    .oblong {
+      display: inline-block;
+      width: 4px;
+      height: 50px;
+      margin-left: 4px;
+      background-color: #17ecb3;
+    }
+    .item1{height: 82px;}
+    .item2{height: 43px;}
+    .item3{height: 64px;}
+    .item4{height: 114px;}
+    .item5{height: 98px;}
+    .item6{height: 56px;}
+    .item7{height: 27px;}
+    .item8{height: 22px;}
+    .item9{height: 16px;}
+    .item10{height: 32px;}
+    .item11{height: 50px;}
+    .item12{height: 38px;}
+    .item13{height: 62px;}
+    .item14{height: 70px;}
+    .data-title {font-size: 54px;color: #2c2e31;}
+    .percent {margin-top: 12px;}
+    .bounce {
+      float: left;
+      width: 80px;
+      margin-right: 10px;
+      border-right: 1px solid #727a8d;
+    }
+    .vistor {overflow: hidden;}
+    .data-name {color: #393f4d;}
+    .data-percent {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 22px;
+      color: #e0edff;
+    }
+  </style>
+</head>
+<body>
+	<div class="analytic-wrapper">
+		<div class="analytic">
+		 	<div class="analytic-top">
+		 		<span class="an-title">Visitors Overview For</span>
+		 		<select class="choose-type">
+		 			<option value="3drops">3drops</option>
+		 			<option value="1drops">1drops</option>
+		 			<option value="2drops">2drops</option>
+		 		</select>
+		 	</div>
+		 	<div class="analytic-main">
+		 	 	<div class="analytic-panel">
+		 	 	  	<div class="dendrogram">
+		 	 	  		<ul class="de-item">
+		 	 	  		  	<li class="oblong item1"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		  	<li class="oblong item3"></li>
+		 	 	  		  	<li class="oblong item4"></li>
+		 	 	  		  	<li class="oblong item5"></li>
+		 	 	  		  	<li class="oblong item1"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		</ul>
+		 	 	  		<ul class="de-item">
+		 	 	  		  	<li class="oblong item6"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		  	<li class="oblong item7"></li>
+		 	 	  		  	<li class="oblong item8"></li>
+		 	 	  		  	<li class="oblong item9"></li>
+		 	 	  		  	<li class="oblong item10"></li>
+		 	 	  		  	<li class="oblong item11"></li>
+		 	 	  		</ul>
+		 	 	  		<ul class="de-item">
+		 	 	  		  	<li class="oblong item1"></li>
+		 	 	  		  	<li class="oblong item12"></li>
+		 	 	  		  	<li class="oblong item13"></li>
+		 	 	  		  	<li class="oblong item14"></li>
+		 	 	  		  	<li class="oblong item5"></li>
+		 	 	  		  	<li class="oblong item4"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		</ul>
+		 	 	  		<ul class="de-item">
+		 	 	  		  	<li class="oblong item10"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		  	<li class="oblong item13"></li>
+		 	 	  		  	<li class="oblong item4"></li>
+		 	 	  		  	<li class="oblong item5"></li>
+		 	 	  		  	<li class="oblong item1"></li>
+		 	 	  		  	<li class="oblong item2"></li>
+		 	 	  		</ul>
+		 	 	  	</div>
+		 	 		<ul class="text">
+		 	 			<li class="text-item">08-15/12</li>
+		 	 			<li class="text-item">16-23/12</li>
+		 	 			<li class="text-item">24-31/12</li>
+		 	 			<li class="text-item">01-08/01</li>
+		 	 		</ul>
+		 	 	</div>
+		 	 	<div class="analytic-data">
+		 	 	  	<p class="data-title">4,893</p>
+		 	 		<div class="percent">
+		 	 		  	<div class="bounce">
+		 	 		  	  	<span class="data-name">Bounce rate</span>
+		 	 		  	  	<span class="data-percent">42%</span>
+		 	 		  	</div>
+		 	 		  	<div class="vistor">
+		 	 		  	  	<span class="data-name">New visitors</span>
+		 	 		  	  	<span class="data-percent">58%</span>
+		 	 		  	</div>
+		 	 		</div>
+		 	 	</div>
+		 	</div>
+		</div>
+	</div>
+</body>
+</html>
