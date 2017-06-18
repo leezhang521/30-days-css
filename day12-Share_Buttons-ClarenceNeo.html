@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170614-Share_Buttons</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      min-height: 100vh;
+      background-color: #eaeaea;
+    }
+    .share {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      color: #444;
+      font-size: 16px;
+      font-weight: bolder;
+      border-radius: 15px 15px 0 0;
+      margin: 100px auto;
+      text-align: center;
+      background-color: #e3ecf0;
+    }
+    .share:hover {
+      color: #ada8a8;
+    }
+    .share:active {
+      color: #000;
+    }
+    .count {
+      position: relative;
+      height: 41px;
+      line-height: 41px;
+      border-radius: 15px 15px 0 0;
+      border: 1px solid #b9b9b9;
+      border-bottom: none;
+    }
+    .count:after {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid #e3ecf0;
+      border-color: #e3ecf0 transparent transparent transparent;
+    }
+    .icon {
+      width: 80px;
+      height: 39px;
+      font-size: 12px;
+      font-weight: normal;
+      color: #fff;
+      line-height: 30px;
+      border-radius: 0 0 15px 15px;
+    }
+    .blue {
+      background-color: #7cc9e3;
+      box-shadow: inset 0px -9px 0px rgba(71, 139, 160, 0.88);
+      border: 1px solid #6aa6ba;
+    }
+    .drakblue {
+      background-color: #4e6ba7;
+      box-shadow: inset 0px -9px 0px rgba(43, 71, 130, 0.91);
+      border: 1px solid #35538f;
+    }
+    .black {
+      background-color: #4a4b4c;
+      box-shadow: inset 0px -9px 0px rgba(58, 58, 58, 0.93);
+      border: 1px solid #303030;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="javascript:void(0);" class="share">
+      <div class="count"><span>12</span></div>
+      <div class="icon blue"><span><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-16-tweet-1.png"> Tweet</span></div>
+    </a>
+    <a href="javascript:void(0);" class="share">
+      <div class="count"><span>34</span></div>
+      <div class="icon drakblue"><span><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-16-like-1.png"> Like</span></div>
+    </a>
+    <a href="javascript:void(0);" class="share">
+      <div class="count"><span>56</span></div>
+      <div class="icon black"><span>+1</span></div>
+    </a>
+  </div>
+</body>
+</html>

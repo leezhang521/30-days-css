@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170617-Search_Dropdown</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      min-height: 100vh;
+      background-color: #eaeaea;
+      overflow: hidden;
+    }
+    .wrapper {
+      width: 240px;
+      margin: 40px auto;
+    }
+    .search {
+      position: relative;
+    }
+    .search input {
+      width: 240px;
+      height: 24px;
+      padding: 0 1em;
+      padding-right: 2em;
+      border: 1px solid #c0c3d2;
+      border-radius: 12px;
+    }
+    input::-webkit-input-placeholder {
+      font-style: italic;
+      color: #bfc1ce;
+    }
+    .search:before {
+      position: absolute;
+      content: '';
+      top: 4px;
+      right: 10px;
+      width: 7px;
+      height: 7px;
+      border: 2px solid #bfc1ce;
+      border-radius: 7px;
+    }
+    .search:after {
+      position: absolute;
+      content: '';
+      top: 14px;
+      right: 7px;
+      width: 6px;
+      height: 2px;
+      background-color: #bfc1ce;
+      transform: rotate(45deg);
+    }
+    .suggest {
+      position: relative;
+      width: 240px;
+      margin-top: 12px;
+      border: 1px solid #c0c3d2;
+      border-radius: 5px;
+      font-size: 12px;
+      text-align: left;
+      background-color: #fcfcfd;
+    }
+    .suggest:before {
+      position: absolute;
+      content: '';
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 8px solid #c0c3d2;
+      border-color: transparent transparent #c0c3d2 transparent;
+    }
+    .suggest li+li {
+      border-top: 1px solid #c0c3d2;
+    }
+    .s-item {
+      position: relative;
+      height: 50px;
+      padding: 10px 12px;
+    }
+    .s-name {
+      color: #808394;
+      line-height: 18px;
+    }
+    .s-username {
+      color: #b5b6c0;
+    }
+    .s-icon {
+      position: absolute;
+      display: inline-block;
+      color: #c0c3d2;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      border-radius: 18px;
+      border: 2px solid #c0c3d2;
+    }
+    .s-icon:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 2px;
+      transform: translateY(-50%);
+      border: 2px solid currentcolor;
+    }
+    .s-icon:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 6px;
+      transform: translateY(-50%);
+      border: 6px solid currentcolor;
+      border-color: transparent transparent transparent currentcolor;
+    }
+    .s-item:hover {
+      background-color: #4499e8;
+    }
+    .s-item:active {
+      background-color: #225e97;
+    }
+    .s-item:hover .s-name,.s-item:hover .s-username {
+      color: #fff;
+    }
+    .s-item:hover .s-icon {
+      color: #1f6db6;
+      border-color: #1f6db6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="search"><input type="text" placeholder="Search Users"></div>
+      <ul class="suggest">
+        <li class="s-item">
+          <a href="javascript:void(0);">
+            <div><h3 class="s-name">Blaze Pollard</h3><span class="s-username">@blazepollard</span></div><i class="s-icon"></i>
+          </a>
+        </li>
+        <li class="s-item">
+          <a href="javascript:void(0);">
+            <div><h3 class="s-name">Bobby Joe</h3><span class="s-username">@bobbyjoe123</span></div><i class="s-icon"></i>
+          </a>
+        </li>
+        <li class="s-item">
+          <a href="javascript:void(0);">
+            <div><h3 class="s-name">Bob Sartarius</h3><span class="s-username">@bobsartarius123</span></div><i class="s-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
