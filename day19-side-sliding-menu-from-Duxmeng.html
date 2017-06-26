@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170626-side-sliding-menu</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul,li{list-style: none;}
+		a{text-decoration: none;color: #333;}
+		html,body{height: 100%;}
+		body {
+	      color: #fff;
+	      font-size: 14px;
+	      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	      position: relative;
+	    }
+	    .nav-side{
+	    	width: 60px;
+	    	height: 100%;
+	    	background:url( https://s17.postimg.org/74cl7s05b/logo_hover.jpg) no-repeat;
+	    	position: absolute;
+	    	top: 0;left: 0;
+	    	padding-top: 73px;
+	    	overflow: hidden;
+	    	transform:translateZ(0);
+	    	transition:all .2s linear;
+	    }
+	    .nav-menu{
+	    	width: 250px;
+	    	height: 100%;
+	    	background: #f7f7f7;
+	    	overflow-y: hidden;
+	    	overflow-x: hidden;
+	   	}
+	    .nav-item{
+	    	line-height: 45px;
+	    	cursor: pointer;
+	    }
+	    .nav-item i{
+			width: 16px;height: 16px;
+			display: inline-block;
+			background: #ccc;
+			border-radius: 100%;
+			margin: 0 40px 0 20px;
+	    }
+	    .nav-menu:hover{
+	    	overflow-y: scroll;
+	    }
+	    .nav-item:hover{
+	    	background: #067e80;
+	    }
+	    .nav-item:hover i{background: #fff;}
+	    .nav-item:hover span{color: #fff;}
+	    .nav-side:hover{   
+	    	width: 250px;
+	    	overflow: visible;			
+	    	transition: all 0.2s linear; 
+		}
+
+		#scroll::-webkit-scrollbar-track{border-radius: 2px;}
+		#scroll::-webkit-scrollbar{width: 5px;background: #f7f7f7;}
+		#scroll::-webkit-scrollbar-thumb{
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background: #bfbfbf;
+		}
+	</style>
+	<body>
+		<nav class="nav-side">
+			<ul class="nav-menu" id="scroll">
+				<li class="nav-item"><a href="javascript:;"><i></i><span>home</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>login</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>contact</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>home</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>login</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>contact</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>home</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>login</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>contact</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>home</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>login</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>contact</span></a></li>
+				<li class="nav-item"><a href="javascript:;"><i></i><span>news</span></a></li>
+			</ul>
+		</nav>
+	</body>
+</html>
