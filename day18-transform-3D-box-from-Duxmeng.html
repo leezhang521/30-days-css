@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170625-transform-3D-box</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul,li{list-style: none;}
+		html,body{height: 100%;min-width: 980px;}
+		body {
+	      color: #fff;
+	      font-size: 14px;
+	      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    }
+	    .d-box,
+	    .d-wrapper,
+	    .d-content{
+	    	width: 100%;
+			height: 100%;
+	    }
+		.d-box{
+			display: table;
+			table-layout: fixed;
+		}
+		.d-item{
+			display: table-cell;
+			perspective: 600px;
+			position: relative;
+			cursor: pointer;
+			overflow: hidden;
+		}
+		.d-wrapper{
+			transform-style: preserve-3d;
+			transform-origin:center center -90px;
+			position: absolute;
+			top: 0;left: 0;
+			transition: .5s;
+		}
+		.d-content{
+			position: absolute;
+			top: 0;left: 0;
+			overflow: hidden;
+		}
+		.d-item:nth-child(1) .upper{background: #358fc9;}
+		.d-item:nth-child(2) .upper{background: #40c666;}
+		.d-item:nth-child(3) .upper{background: #dec345;}
+		.d-item:nth-child(4) .upper{background: #ee9833;}
+		.d-item:nth-child(5) .upper{background: #db593b;}
+		.d-item:nth-child(6) .upper{background: #c04067;}
+		.d-item:nth-child(7) .upper{background: #a569d7;}
+		.d-item:nth-child(8) .upper{background: #6156c3;}
+		.text{
+			font-size: 85px;
+			opacity: .5;
+			text-transform:capitalize;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			top: 50%;left: 50%;
+			transform:translate(-50%,-50%);
+		}
+		.d-item:nth-child(1) .back{background: #2271b6;}
+		.d-item:nth-child(2) .back{background: #2ab248;}
+		.d-item:nth-child(3) .back{background: #d2ae2e;}
+		.d-item:nth-child(4) .back{background: #e87a21;}
+		.d-item:nth-child(5) .back{background: #ce3d26;}
+		.d-item:nth-child(6) .back{background: #aa2a49;}
+		.d-item:nth-child(7) .back{background: #894ac8;}
+		.d-item:nth-child(8) .back{background: #443bae;}
+		.back .text{opacity: .8;}
+		.back{
+			left: 240px;
+			transform-origin: left;
+			transform:rotateY(90deg);
+		}
+		.d-item:hover .d-wrapper{
+			transform:rotateY(-90deg);
+		}
+	</style>
+	<body>
+		<ul class="d-box">
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">ps</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">ps</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">dw</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">dw</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">fw</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">fw</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">ai</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">ai</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">fl</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">fl</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">id</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">id</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">pr</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">pr</p>
+					</div>
+				</div>
+			</li>
+			<li class="d-item">
+				<div class="d-wrapper">
+					<div class="d-content upper">
+						<p class="text">ae</p>
+					</div>
+					<div class="d-content back">
+						<p class="text">ae</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

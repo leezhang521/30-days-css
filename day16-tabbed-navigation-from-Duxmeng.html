@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170623-tabbed-navigation</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul li{list-style: none;}
+		body {
+	      color: #808494; 
+	      font-size: 14px;
+	      background: #fff;
+	      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    }
+	    a{color: #fff;text-decoration: none;}
+	    .tab-wrapper{
+			width: 570px;
+			padding: 75px 43px 0;
+			margin: 30px auto 0;
+			background: #3e3e3e;
+	    }
+		.tab-nav:after{
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.tab-nav .tab-item{
+			float: left;
+			position: relative;
+		}
+		.tab-item > a{
+			padding: 9px 15px;
+			display: block;
+			background: linear-gradient(to bottom,#b1cedc,#8cb6cc);
+			border-radius: 3px;
+			margin-right: 5px;
+		}
+		.tab-item > a:hover{
+			background: linear-gradient(to bottom,#84ccef,#36a7e2);
+		}
+		.home{width: 34px;height: 34px;}
+		.home i{
+			width: 0;height: 0;
+			border: 10px solid transparent;
+			border-bottom-color: #fff;
+			position: absolute;
+			top: -2px;left: 6px;
+			z-index: 3;
+		}
+		.home:before,.home:after{
+			content: "";
+			position: absolute;
+			bottom: 8px;
+			width: 4px;height: 11px;
+			background: #fff;
+		}
+		.home:before{left: 10px;}
+		.home:after{right: 15px;height: 15px;z-index: 0;}
+
+		.current a{background:#fff;color: #333;}
+		.nav-menu{
+			position: absolute;
+			top: 44px;left: 0;
+			width: 160px;
+			background: #fff;
+			border: 1px solid #d7d7d7;
+			border-top-color: #fff;
+			padding: 0 20px;
+		}
+		.nav-menu li{
+			line-height: 30px;
+			border-bottom: 1px solid #d7d7d7;
+		}
+		.nav-menu li:last-child{border-bottom: 0 none;}
+		.nav-menu a{color: #666;font-size: 12px;}
+		.nav-menu a:hover{color:#36a7e2; }
+		.bg-fff{
+			height: 160px;
+			background: #efefef;
+			margin-top: 10px;
+			border-top: 1px solid #d7d7d7;
+		}
+	</style>
+	<body>
+		<div class="tab-wrapper">
+			<ul class="tab-nav">
+				<li class="tab-item"><a href="javascript:;" class="home"><i></i></a></li>
+				<li class="tab-item current">
+					<a href="javascript:;">Community</a>
+					<ul class="nav-menu">
+						<li><a href="javascript:;">Recent Activity</a></li>
+						<li><a href="javascript:;">Member Forum</a></li>
+						<li><a href="javascript:;">Member List</a></li>
+						<li><a href="javascript:;">Member Groups</a></li>
+					</ul>
+				</li>
+				<li class="tab-item"><a href="javascript:;">Pet Help</a></li>
+				<li class="tab-item"><a href="javascript:;">Pets for Sale</a></li>
+				<li class="tab-item"><a href="javascript:;">Pet Services</a></li>
+			</ul>
+		</div>
+		<div class="tab-wrapper bg-fff">
+			
+		</div>
+	</body>
+</html>
