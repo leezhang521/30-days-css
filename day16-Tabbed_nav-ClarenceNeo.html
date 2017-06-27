@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Clarence-170618-Tabbed_nav</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      width: 570px;
+      margin: 0 auto;
+      background-color: #eee;
+      height: 100vh;
+    }
+    .header {
+      height: 110px;
+      background-color: #3c3c3c;
+      border-bottom: 6px solid #fff;
+      box-sizing: content-box;
+      text-align: center;
+      box-shadow: 0 1px 1px #b3b2b2;
+    }
+    .menu {
+      display: inline-block;
+      text-align: center;
+      font-size: 0;
+      margin-top: 76px;
+      height: 34px;
+    }
+    .menu li+li {
+      margin-left: 2px;
+    }
+    .m-item {
+      position: relative;
+      display: inline-block;
+      height: 34px;
+      padding: 0 2em;
+      font-size: 12px;
+      line-height: 34px;
+      background: linear-gradient(to bottom, #afcfdc, #8ab9cc);
+      border-radius: 3px 3px 0 0;
+    }
+    .m-item a {
+      display: inline-block;
+      color: #fff;
+    }
+    .m-item a:hover {
+      color: #666;
+    }
+    .m-home {
+      width: 40px;
+      padding: 0;
+      height: 34px;
+    }
+    .m-icon {
+      display: inline-block;
+      height: 12px;
+    }
+    .m-icon img {
+      display: block;
+    }
+    .ms-menu {
+      display: none;
+      position: absolute;
+      top: 34px;
+      left: 0;
+      width: 160px;
+      text-align: left;
+      padding: 0 2em;
+      padding-top: 6px;
+      background-color: #fff;
+      padding-bottom: 8px;
+      box-shadow: 0 1px 1px #b3b2b2;
+    }
+    .m-item:hover .ms-menu {
+      display: block;
+    }
+    .ms-menu li+li {
+      border-top: 1px solid #eee;
+    }
+    .ms-menu a {
+      color: #666;
+    }
+    .ms-menu a:hover {
+      color: #b8b8b8;
+    }
+    .ms-menu a:active {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <ul class="menu">
+        <li class="m-item m-home"><a class="m-icon" href="javascript:void(0);"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-24-home%20icon.png"></a></li>
+        <li class="m-item">
+          <a href="javascript:void(0);">Community</a>
+          <ul class="ms-menu">
+            <li><a href="javascript:void(0);">Recent Activity</a></li>
+            <li><a href="javascript:void(0);">Member Forum</a></li>
+            <li><a href="javascript:void(0);">Member List</a></li>
+            <li><a href="javascript:void(0);">Member Groups</a></li>
+          </ul>
+        </li>
+        <li class="m-item"><a href="javascript:void(0);">Pet Help</a></li>
+        <li class="m-item"><a href="javascript:void(0);">Pets for sale</a></li>
+        <li class="m-item"><a href="javascript:void(0);">Pet Services</a></li>
+      </ul>
+    </div>
+    <div class="content"></div>
+  </div>
+</body>
+</html>

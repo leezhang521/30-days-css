@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clarence-170624-Newsletter_Sign_Up_Form</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    input,button,select,textarea{outline:none}
+    ul, ol {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .clearfix:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    .container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-image: radial-gradient(#eee, #aba9aa)
+    }
+    .wrapper {
+      position: relative;
+      width: 350px;
+      margin: 100px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 1px #666;
+    }
+    .close {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 10px;
+      right: 10px;
+      background-color: #a9a9a9;
+      border-radius: 8px;
+    }
+    .close:hover {
+      background-color: #bbbaba;
+    }
+    .close:active {
+      background-color: #929090;
+    }
+    .close:before {
+      position: absolute;
+      content: '';
+      top: 6px;
+      right: 3px;
+      width: 9px;
+      height: 2.5px;
+      border-radius: 1.25px;
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+    .close:after {
+      position: absolute;
+      content: '';
+      top: 6px;
+      right: 3px;
+      width: 9px;
+      height: 2.5px;
+      border-radius: 1.25px;
+      background-color: #fff;
+      transform: rotate(-45deg);
+    }
+    .media {
+      display: inline-block;
+      margin: 40px 28px;
+      height: 80px;
+    }
+    .m-img {
+      float: left;
+    }
+    .m-text {
+      margin-left: 110px;
+      font-size: 14px;
+    }
+    .title {
+      font-weight: bolder;
+    }
+    .content {
+      margin-top: 10px;
+      line-height: 1.5;
+      color: #452020;
+    }
+    .footer {
+      height: 66px;
+      padding: 15px 0;
+      text-align: center;
+      background-color: #f5f5f5;
+      font-size: 0;
+      border-radius: 0 0 5px 5px;
+    }
+    .subscribe {
+      display: table;
+      margin: 0 auto;
+    }
+    .subscribe .f-mail {
+      display: table-cell;
+      padding-left: 1.5em;
+      font-size: 16px;
+      height: 36px;
+      width: 254px;
+      border: 1px solid #7b7b7b;
+      border-right: none;
+      border-radius: 18px 0 0 18px;
+    }
+    .subscribe .f-btn {
+      position: relative;
+      display: table-cell;
+      width: 60px;
+      height: 36px;
+      border: 1px solid #3e9642;
+      border-radius: 0 18px 18px 0;
+      background-image: linear-gradient(to bottom, #81ef84, #54de4f);
+    }
+    .subscribe .f-btn:hover {
+      background-image: linear-gradient(to bottom, #8ff592, #6eec6a);
+    }
+    .subscribe .f-btn:active {
+      background-image: linear-gradient(to bottom, #77dc79, #4cce47);
+    }
+    .f-btn .f-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -9.5px;
+      margin-left: -15.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="close"></div>
+      <div class="media clearfix">
+        <div class="m-img"><img src="http://oeryvxt85.bkt.clouddn.com/2017-06-24-Mail%20Icon.png"></div>
+        <div class="m-text">
+          <div class="title">SUBSCRIBE</div>
+          <div class="content">Subscribe to our mailing list to get the updates to your email inbox.</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="subscribe">
+          <input class="f-mail" type="text" name="mail">
+          <a class="f-btn" href="javascript:void(0);"><img class="f-icon" src="http://oeryvxt85.bkt.clouddn.com/2017-06-24-Shape%2014.png"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
