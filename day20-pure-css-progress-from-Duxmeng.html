@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170628-pure-css-progress</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul,li{list-style: none;}
+		a{text-decoration: none;color: #333;}
+		html,body{height: 100%;}
+		body {
+	      color: #fff;
+	      font-size: 14px;
+	      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	      background: #d0d0d0;
+	    }
+	    .container{
+	    	width: 320px;
+	    	margin: 30px auto;
+	    }
+	    .text-center{text-align: center;}
+	    .d-cuboid{
+	    	perspective:1000px;
+	    	perspective-origin:50% 50%;
+	    	backface-visibility:visible;
+	    }
+	    .cuboid-wrapper{
+	    	position: relative;
+	    	height: 200px;
+	    	transition:all .3s ease-in-out;
+	    	transform:rotateX(60deg) rotateY(0deg);
+	    	transform-style:preserve-3d;
+	    }
+	    .cuboid{
+	    	width: 100%;
+	    	height: 40px;
+	    	position: relative;
+	    	background: rgba(255,255,255,.2);
+	    }
+	    .color{
+	    	width: 75%;
+	    	background: rgba(236, 0, 140, 0.6);
+	    	height: 100%;
+	    	transition:all .3s ease-in-out;
+	    }
+	    .cuboid-top{transform:rotateX(0deg) rotateY(0deg) translateX(0) translateY(80px) translateZ(40px);}
+	    .cuboid-back{transform:rotateX(90deg) rotateY(0deg) translateX(0) translateY(20px) translateZ(-20px);}
+	    .cuboid-bottom{box-shadow: 0 2px 8px rgba(0,0,0,.2),2px -3px 6px rgba(0,0,0,.2),2px -2px 4px #fefefe;}
+	    .side-left{
+	    	width:40px;
+	    	background: rgba(236,0,140,.5);
+	    	transform:rotateX(90deg) rotateY(-90deg) translateX(40px) translateY(20px) translateZ(20px);
+	    }
+	    .side-right{
+	    	width:40px;
+	    	background: rgba(255,255,255,.2);
+	    	transform:rotateX(90deg) rotateY(-90deg) translateX(80px) translateY(20px) translateZ(-20px);
+	    	position: absolute;
+	    	right: 0;
+	    }
+	    .cuboid-face{transform:rotateX(90deg) rotateY(0deg) translateX(0) translateY(20px) translateZ(60px);}
+	    .btn label{
+	    	padding: 10px 15px;
+	    	border: 1px solid #fff;
+	    	border-radius: 3px;
+	    	margin-left:10px;
+	    	cursor: pointer;
+	    	transition:all .15s ease-in-out;
+	    }
+	    input{display: none;}
+	    input[id='red']:checked ~ .cuboid-wrapper .color{background: rgba(236, 0, 140, 0.6);;}
+	    input[id='red']:checked ~ .cuboid-wrapper .side-left{background: rgba(236,0,140,.5);}
+	    input[id='green']:checked ~ .cuboid-wrapper .color{background: rgba(81,191,81,.6);}
+	    input[id='green']:checked ~ .cuboid-wrapper .side-left{background: rgba(81,191,81,.8);}
+	    input[id='blue']:checked ~ .cuboid-wrapper .color{background: rgba(14,110,234,.6);}
+	    input[id='blue']:checked ~ .cuboid-wrapper .side-left{background: rgba(14,110,234,.8);}
+	    input[id='red']:checked ~ .btn label[for='red'],
+		input[id='green']:checked ~ .btn label[for='green'],
+		input[id='blue']:checked ~ .btn label[for='blue'],
+		input[id='first']:checked ~ .btn label[for='first'] ,
+		input[id='second']:checked ~ .btn label[for='second'] ,
+		input[id='third']:checked ~ .btn label[for='third'] ,
+		input[id='fourth']:checked ~ .btn label[for='four'] ,
+		input[id='one']:checked ~ .btn label[for='one'] ,
+		input[id='two']:checked ~ .btn label[for='two'] ,
+		input[id='three']:checked ~ .btn label[for='three'] ,
+		input[id='four']:checked ~ .btn label[for='four'] {color: #fff;border: 1px solid #031523;background-color: #0a4069;}
+		input[id='first']:checked ~ .cuboid-wrapper .color{width: 25%;}
+		input[id='second']:checked ~ .cuboid-wrapper .color{width: 50%;}
+		input[id='third']:checked ~ .cuboid-wrapper .color{width: 75%;}
+		input[id='fourth']:checked ~ .cuboid-wrapper .color{width: 100%;}
+		.flex-wrapper{
+			display: flex;
+			flex-direction:row;
+		}
+		.flex-wrapper .cuboid-wrapper{
+			flex:1;
+			margin: 0 5px;
+		}
+		.green .color{background: rgba(81,191,81,.6);}
+	    .green .side-left{background: rgba(81,191,81,.8);}
+	    .blue .color{background: rgba(14,110,234,.6);}
+	    .blue .side-left{background: rgba(14,110,234,.8);}
+	    input[id='one']:checked ~ .flex-wrapper .green{flex:1 0 40%;}
+		input[id='two']:checked ~ .flex-wrapper .red{flex:1 0 0%;}
+		input[id='two']:checked ~ .flex-wrapper .green{flex:1;}
+		input[id='two']:checked ~ .flex-wrapper .blue{flex:1 0 30%;}
+		input[id='three']:checked ~ .flex-wrapper .red{flex:1;}
+		input[id='four']:checked ~ .flex-wrapper .red,
+		input[id='four']:checked ~ .flex-wrapper .green{flex:1 0 30%;}
+		input[id='four']:checked ~ .flex-wrapper .blue{flex:1;}
+		input[id='four']:checked ~ .flex-wrapper .blue .color {width: 100%;}
+	</style>
+	<body>
+		<div class="container">
+			<h2 class="text-center">Pure CSS Progress</h2>
+			<div class="d-cuboid">
+				<input type="radio" name="switch-color" id="red" checked>
+				<input type="radio" name="switch-color" id="green">
+				<input type="radio" name="switch-color" id="blue">
+				<div class="cuboid-wrapper">
+					<div class="cuboid cuboid-top"><div class="color"></div></div>
+					<div class="cuboid cuboid-back"><div class="color"></div></div>
+					<div class="cuboid cuboid-bottom"><div class="color"></div></div>
+					<div class="cuboid side-left"></div>
+					<div class="cuboid side-right"></div>
+					<div class="cuboid cuboid-face"><div class="color"></div></div>
+				</div>
+				<div class="btn text-center">
+					<label for="red">red</label>
+					<label for="green">green</label>
+					<label for="blue">blue</label>
+				</div>
+			</div>
+			<div class="d-cuboid">
+				<input type="radio" name="switch-width" id="first" checked>
+				<input type="radio" name="switch-width" id="second">
+				<input type="radio" name="switch-width" id="third">
+				<input type="radio" name="switch-width" id="fourth">
+				<div class="cuboid-wrapper">
+					<div class="cuboid cuboid-top"><div class="color"></div></div>
+					<div class="cuboid cuboid-back"><div class="color"></div></div>
+					<div class="cuboid cuboid-bottom"><div class="color"></div></div>
+					<div class="cuboid side-left"></div>
+					<div class="cuboid side-right"></div>
+					<div class="cuboid cuboid-face"><div class="color"></div></div>
+				</div>
+				<div class="btn text-center">
+					<label for="first">4/1</label>
+					<label for="second">4/2</label>
+					<label for="third">4/3</label>
+					<label for="fourth">full</label>
+				</div>
+			</div>
+			<div class="d-cuboid">
+				<input type="radio" name="switch-w" id="one" checked>
+				<input type="radio" name="switch-w" id="two">
+				<input type="radio" name="switch-w" id="three">
+				<input type="radio" name="switch-w" id="four">
+				<div class="flex-wrapper">
+					<div class="cuboid-wrapper red">
+						<div class="cuboid cuboid-top"><div class="color"></div></div>
+						<div class="cuboid cuboid-back"><div class="color"></div></div>
+						<div class="cuboid cuboid-bottom"><div class="color"></div></div>
+						<div class="cuboid side-left"></div>
+						<div class="cuboid side-right"></div>
+						<div class="cuboid cuboid-face"><div class="color"></div></div>
+					</div>
+					<div class="cuboid-wrapper green">
+						<div class="cuboid cuboid-top"><div class="color"></div></div>
+						<div class="cuboid cuboid-back"><div class="color"></div></div>
+						<div class="cuboid cuboid-bottom"><div class="color"></div></div>
+						<div class="cuboid side-left"></div>
+						<div class="cuboid side-right"></div>
+						<div class="cuboid cuboid-face"><div class="color"></div></div>
+					</div>
+					<div class="cuboid-wrapper blue">
+						<div class="cuboid cuboid-top"><div class="color"></div></div>
+						<div class="cuboid cuboid-back"><div class="color"></div></div>
+						<div class="cuboid cuboid-bottom"><div class="color"></div></div>
+						<div class="cuboid side-left"></div>
+						<div class="cuboid side-right"></div>
+						<div class="cuboid cuboid-face"><div class="color"></div></div>
+					</div>
+				</div>
+				<div class="btn text-center">
+					<label for="one">E-1</label>
+					<label for="two">E-2</label>
+					<label for="three">E-3</label>
+					<label for="four">E-4</label>
+				</div>
+			</div>
+		</div>   
+	</body>
+</html>
