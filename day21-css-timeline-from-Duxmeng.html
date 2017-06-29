@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duxmeng-170628-pure-css-progress</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;box-sizing: border-box;}
+		ul,li{list-style: none;}
+		a{text-decoration: none;color: #333;}
+		html,body{height: 100%;}
+		body {
+			font-size: 14px;
+	      	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	      	background: #f1eded;
+	    }
+	    .clear{ display:block; width:0; height:0; line-height:0; clear:both; overflow:hidden;}
+		.clearfix:after,.clearfix:before{ content:""; display:table;}
+		.clearfix:after{ clear:both;}
+		.clearfix{ *zoom:1; clear:both;}
+	   	.timeline-wrapper{
+	   		width: 700px;
+	   		margin: 30px auto 0;
+	   		position: relative;
+	   	}
+	   	.timeline-wrapper:before{
+	   		content: "";
+	   		width: 6px;
+	   		height: 100%;
+	   		background: linear-gradient(to bottom, rgba(102,102,102,0) 0%, rgb(102,102,102) 8%, rgb(102,102,102) 92%, rgba(102,102,102,0) 100%);
+	   		position: absolute;
+	   		top: 0;
+	   		left: 50%;
+	   		margin-left: -3px;
+	   	}
+	   	.timeline-wrapper li .right{float: right;width: 300px;padding: 10px 0;}
+	   	.timeline-wrapper li:nth-child(2n) .right{float: left;text-align: right;}
+	   	.flag{
+	   		padding:6px 10px;
+	   		border-radius: 5px;
+	   		background: #fff;
+	   		position: relative;
+	   		box-shadow: 0 2px 1px 0 rgba(0,0,0,.2);
+	   	}
+	   	.flag:before{
+	   		content: "";
+	   		position: absolute;
+	   		top: 50%;left: -57px;
+	   		width: 8px;height: 8px;
+	   		background: #fff;
+	   		border-radius: 100%;
+	   		border:3px solid red;
+	   	}
+	   	.flag:after{
+	   		content: "";
+	   		position: absolute;
+	   		top: 50%;left: -10px;
+	   		margin-top: -5px;
+	   		width: 0;height: 0;
+	   		border:5px solid transparent;
+	   		border-right-color: white;
+	   	}
+	   	.timeline-wrapper li:nth-child(2n) .flag:before{
+	   		right: -57px;
+	   		left: inherit;
+	   	}
+	   	.timeline-wrapper li:nth-child(2n) .flag:after{
+	   		left: inherit;
+	   		right: -10px;
+	   		border-left-color: white;
+	   		border-right-color: transparent;
+	   	}
+	   	.timeline-wrapper li:nth-child(2n) .flag{float: right;}
+	   	.time{
+	   		color: #ff6161;
+	   		font-size: 12px;
+	   		background: #fff;
+	   		padding: 1px 2px;
+	   	}
+	   	.information{margin-top: 20px;}
+	</style>
+	<body>
+		<ul class="timeline-wrapper">
+			<li class="clearfix">
+				<div class="right">
+					<div class="top">
+						<span class="flag">Freelancer</span>
+						<span class="time">2013-present</span>
+					</div>
+					<p class="information">My current employment. Way better than the position before!</p>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="right">
+					<div class="top">
+						<span class="flag">Freelancer</span>
+						<span class="time">2013-present</span>
+					</div>
+					<p class="information">My current employment. Way better than the position before!</p>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="right">
+					<div class="top">
+						<span class="flag">Freelancer</span>
+						<span class="time">2013-present</span>
+					</div>
+					<p class="information">My current employment. Way better than the position before!</p>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="right">
+					<div class="top">
+						<span class="flag">Freelancer</span>
+						<span class="time">2013-present</span>
+					</div>
+					<p class="information">My current employment. Way better than the position before!</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
